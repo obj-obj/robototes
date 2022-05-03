@@ -1,0 +1,18 @@
+---
+import * as site from "../site";
+
+let {content = {}} = Astro.props;
+let title = content.title ? (content.title + " | " + site.title) : (site.title);
+---
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<link rel="icon" href="/assets/robototes.png">
+
+	<title>{title}</title>
+
+	<!-- TODO add Open Graph Protocol tags -->
+
+	<link rel="stylesheet" type="text/css" href="https://code.cdn.mozilla.net/fonts/fira.css">
+</head>

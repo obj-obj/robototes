@@ -1,0 +1,19 @@
+---
+import Head from "../components/head.astro";
+import Nav from "../components/nav.astro";
+
+import "../styles/style.scss";
+---
+
+<html lang="en-us" class="w-full h-full dark:bg-black">
+	<Head content={Astro.props.content} />
+
+	<body class="w-full h-full
+	bg-gradient-to-bl from-rose-300 to-pink-400
+	dark:from-pink-900/75 dark:to-rose-900/50  dark:text-white">
+		<Nav content={Astro.props.content} />
+		<div class="content pl-10 pr-10">
+			<slot />
+		</div>
+	</body>
+</html>

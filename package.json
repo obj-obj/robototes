@@ -9,7 +9,9 @@
 		"preview": "astro preview"
 	},
 	"devDependencies": {
-		"astro": "^1.0.0-beta.20",
-		"minhtml": "^1.0.1"
+		"@astrojs/tailwind": "^0.2.1",
+		"astro": "1.0.0-beta.21",
+		"minhtml": "^1.0.1",
+		"sass": "^1.51.0"
 	}
 }
