@@ -6,12 +6,12 @@
 	"scripts": {
 		"dev": "astro dev",
 		"start": "astro dev",
-		"build": "astro build && minhtml --collapse-whitespace --conservative-collapse --remove-comments --remove-empty-attributes --remove-empty-elements --remove-optional-tags --remove-redundant-attributes --use-short-doctype --file-ext html --input-dir dist --output-dir dist",
+		"build": "astro build && minhtml --collapse-whitespace --conservative-collapse --remove-comments --remove-empty-attributes --remove-empty-elements --remove-optional-tags --remove-redundant-attributes --use-short-doctype --minify-css --minify-js --file-ext html --input-dir dist --output-dir dist",
 		"preview": "astro preview"
 	},
 	"devDependencies": {
 		"@astrojs/tailwind": "^0.2.1",
-		"astro": "1.0.0-beta.23",
+		"astro": "1.0.0-beta.24",
 		"minhtml": "^1.0.1",
 		"sass": "^1.51.0"
 	}

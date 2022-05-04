@@ -25,4 +25,4 @@ Lead mentor: klinee@bsd405.org
 
 Enter any questions you have below along with your name and email address.
 
-<iframe src="https://forms.office.com/Pages/ResponsePage.aspx?id=OUFKmQZ8HkmAmHkAbVdd4NzMqPsKhj9FoAY0HA7j0CBURUc3RDdRNUtKV0lXUjI0WE00VzBMUU9DWC4u&embed=true">
+<a target="_blank" href="https://forms.office.com/Pages/ResponsePage.aspx?id=OUFKmQZ8HkmAmHkAbVdd4NzMqPsKhj9FoAY0HA7j0CBURUc3RDdRNUtKV0lXUjI0WE00VzBMUU9DWC4u">Open form</a>

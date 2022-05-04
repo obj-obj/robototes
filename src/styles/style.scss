@@ -2,7 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-.content {
+.content,
+footer {
+	@apply pl-10 pr-10;
+
 	* {
 		margin-block: 0.67em;
 	}
@@ -39,6 +42,13 @@
 * {
 	font-family: "Fira Sans";
 	font-size: 20px;
+	text-align: justify;
+	scroll-behavior: smooth;
+}
+
+html,
+body {
+	transition-duration: 1s;
 }
 
 iframe {
