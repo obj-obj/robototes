@@ -1,6 +1,6 @@
 ---
-let {href} = Astro.props;
-let active = href == Astro.canonicalURL.pathname;
+const {href} = Astro.props;
+const active = href == Astro.canonicalURL.pathname;
 ---
 
 <div class={"w-max flex items-center h-full p-1 border-white dark:border-black " + (active ? "bg-black/25" : "hover:bg-black/25")}>

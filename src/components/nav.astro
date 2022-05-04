@@ -1,18 +1,42 @@
 ---
-import NavLink from "./navlink.astro";
+import Navdrop from './navdrop.astro';
+import Navlink from "./navlink.astro";
 ---
 
-<nav class="flex w-full h-10 bg-black/25">
+<nav class="flex w-full h-8 bg-black/25">
 	<a class="flex items-center p-1" href="/">
 		<img src="/assets/robototes.png" class="h-full mr-1">
 		Robototes
 	</a>
 	<div class="flex items-center divide-x">
-		<NavLink href="/">Home</NavLink>
-		<NavLink href="/about">About</NavLink>
-		<NavLink href="/outreach">Outreach</NavLink>
-		<NavLink href="/resources">Resources</NavLink>
-		<NavLink href="/calendar">Calendar</NavLink>
-		<NavLink href="/contact">Contact Us</NavLink>
+		<Navlink href="/">Home</Navlink>
+
+		<Navdrop title="About" href="/about/">
+			<Navlink href="/about/first/">FIRST</Navlink>
+			<Navlink href="/about/2412/">Team 2412</Navlink>
+			<Navlink href="/about/bots/">Robototes Bots</Navlink>
+			<Navlink href="/about/leadership/">Student Leadership</Navlink>
+			<Navlink href="/about/mentors/">Mentors</Navlink>
+			<Navlink href="/about/sponsors/">Sponsors</Navlink>
+			<Navlink href="/about/find_us/">Find Us</Navlink>
+		</Navdrop>
+
+		<Navdrop title="Outreach" href="/outreach/">
+			<Navlink href="/outreach/flla/">FLLA Bellevue</Navlink>
+			<Navlink href="/outreach/equity/">Equity Initiative</Navlink>
+			<Navlink href="/outreach/camp/">Summer Camp</Navlink>
+			<Navlink href="/outreach/resources/">Resources</Navlink>
+			<Navlink href="/outreach/guidelines/">Guidelines</Navlink>
+		</Navdrop>
+
+		<Navdrop title="Resources" href="/resources/">
+			<Navlink href="/resources/chairman/">Chairman</Navlink>
+			<Navlink href="/resources/documents">Documents</Navlink>
+			<Navlink href="/resources/technical">Technical</Navlink>
+		</Navdrop>
+
+		<Navlink href="/calendar/">Calendar</Navlink>
+
+		<Navlink href="/contact/">Contact Us</Navlink>
 	</div>
 </nav>

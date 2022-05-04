@@ -1,8 +1,8 @@
 ---
 import * as site from "../site";
 
-let {content = {}} = Astro.props;
-let title = content.title ? (content.title + " | " + site.title) : (site.title);
+const {content = {}} = Astro.props;
+const title = content.title ? (content.title + " | " + site.title) : (site.title);
 ---
 
 <head>

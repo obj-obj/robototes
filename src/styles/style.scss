@@ -37,6 +37,20 @@
 }
 
 * {
-	font-family: "Fira Sans Light";
+	font-family: "Fira Sans";
 	font-size: 20px;
+}
+
+iframe {
+	@apply w-full h-screen;
+}
+
+// Nav
+.nav-dropdown-content {
+	transition-duration: 0.25s;
+	@apply absolute opacity-0 pointer-events-none translate-y-5 p-1 bg-red-400 dark:bg-[#44091b] rounded-md border border-slate-300 dark:border-slate-500;
+}
+
+.nav-dropdown:hover .nav-dropdown-content {
+	@apply opacity-100 pointer-events-auto translate-y-0;
 }
