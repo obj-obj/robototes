@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+	font-family: "Fira Sans";
+	font-size: 20px;
+	text-align: justify;
+	scroll-behavior: smooth;
+}
+
+html,
+body {
+	transition-duration: 1s;
+}
+
+iframe {
+	@apply w-full h-screen;
+}
+
 .content,
 footer {
 	@apply pl-10 pr-10;
@@ -39,23 +55,11 @@ footer {
 	}
 }
 
-* {
-	font-family: "Fira Sans";
-	font-size: 20px;
-	text-align: justify;
-	scroll-behavior: smooth;
-}
-
-html,
-body {
-	transition-duration: 1s;
-}
-
-iframe {
-	@apply w-full h-screen;
-}
-
 // Nav
+.navlink {
+	@apply w-max flex items-center h-full p-1 border-black hover:bg-black/25;
+}
+
 .nav-dropdown-content {
 	transition-duration: 0.25s;
 	@apply absolute opacity-0 pointer-events-none translate-y-5 p-1 bg-[#44091b] rounded-md border border-slate-500;

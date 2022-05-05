@@ -1,6 +1,6 @@
 ---
 title: Contact Us
-layout: ../layouts/base.astro
+layout: /src/layouts/base.astro
 ---
 
 # Contact Us

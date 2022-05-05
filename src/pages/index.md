@@ -1,6 +1,6 @@
 ---
 title: Home
-layout: ../layouts/base.astro
+layout: /src/layouts/base.astro
 ---
 
 # The Robototes

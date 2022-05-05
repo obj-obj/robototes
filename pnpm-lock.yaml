@@ -2,15 +2,21 @@ lockfileVersion: 5.4
 
 specifiers:
   '@astrojs/tailwind': ^0.2.1
+  '@swup/preload-plugin': ^1.0.3
+  '@swup/slide-theme': ^1.0.5
   astro: 1.0.0-beta.24
   minhtml: ^1.0.1
   sass: ^1.51.0
+  swup: ^2.0.14
 
 devDependencies:
   '@astrojs/tailwind': 0.2.1
+  '@swup/preload-plugin': 1.0.3
+  '@swup/slide-theme': 1.0.5
   astro: 1.0.0-beta.24_sass@1.51.0
   minhtml: 1.0.1
   sass: 1.51.0
+  swup: 2.0.14
 
 packages:
 
@@ -394,6 +400,28 @@ packages:
       tsm: 2.2.1
     dev: true
 
+  /@swup/plugin/1.0.1:
+    resolution: {integrity: sha512-QrTGn1DLx+50CNsk6oGzUFnyNyLkDK6iLb032qKImmAXS+0Dd1cwa8cSGvJ+I27J4qR8y6oJNurgHIEc6ZCTrg==}
+    dev: true
+
+  /@swup/preload-plugin/1.0.3:
+    resolution: {integrity: sha512-Au2v5kwwrY2WFYEmRoHa8FXMq7S/7KgO+iG2n5IOS7CZfVilIpqTIEQQ8y7TZsQuL6+Pk/57aycYywVLZ8tc3w==}
+    dependencies:
+      '@swup/plugin': 1.0.1
+      delegate: 3.2.0
+      swup: 2.0.14
+    dev: true
+
+  /@swup/slide-theme/1.0.5:
+    resolution: {integrity: sha512-0xxqtURSMDScjLMRdNjtxzo8NGCPcmp6VXrQcxIQzQDSAvwNnP8Zw871C+FSL1EMe8OhAzWAP3E3x9vzH+iLHg==}
+    dependencies:
+      '@swup/theme': 1.0.7
+    dev: true
+
+  /@swup/theme/1.0.7:
+    resolution: {integrity: sha512-OINEaf34fYs90l7/YUUKfOf+paY7/FDhOBLwYxrD0w1OjBiItZpw3N+ATA/QklJwmoUu3KkDFOaQG0zT4KxmmA==}
+    dev: true
+
   /@types/acorn/4.0.6:
     resolution: {integrity: sha512-veQTnWP+1D/xbxVrPC3zHnCZRjSrKfhbMUlEA43iMZLu7EsnTtkJklIuwrCPbOi8YkvDQAiW05VQQFvvz9oieQ==}
     dependencies:
@@ -706,7 +734,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001335
-      electron-to-chromium: 1.4.132
+      electron-to-chromium: 1.4.134
       escalade: 3.1.1
       node-releases: 2.0.4
       picocolors: 1.0.0
@@ -950,6 +978,14 @@ packages:
     resolution: {integrity: sha1-yY2bzvdWdBiOEQlpFRGZ45sfppM=}
     dev: true
 
+  /delegate/3.1.3:
+    resolution: {integrity: sha1-moJRp3fXAl+qVXN7w7BxdCEnqf0=}
+    dev: true
+
+  /delegate/3.2.0:
+    resolution: {integrity: sha512-IofjkYBZaZivn0V8nnsMJGBr4jVLxHDheKSW88PyxS5QC4Vo9ZbZVvhzlSxY87fVq3STR6r+4cGepyHkcWOQSw==}
+    dev: true
+
   /dequal/2.0.2:
     resolution: {integrity: sha512-q9K8BlJVxK7hQYqa6XISGmBZbtQQWVXSrRrWreHC94rMt1QL/Impruc+7p2CYSYuVIUr+YCt6hjrs1kkdJRTug==}
     engines: {node: '>=6'}
@@ -1025,8 +1061,8 @@ packages:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
     dev: true
 
-  /electron-to-chromium/1.4.132:
-    resolution: {integrity: sha512-JYdZUw/1068NWN+SwXQ7w6Ue0bWYGihvSUNNQwurvcDV/SM7vSiGZ3NuFvFgoEiCs4kB8xs3cX2an3wB7d4TBw==}
+  /electron-to-chromium/1.4.134:
+    resolution: {integrity: sha512-OdD7M2no4Mi8PopfvoOuNcwYDJ2mNFxaBfurA6okG3fLBaMcFah9S+si84FhX+FIWLKkdaiHfl4A+5ep/gOVrg==}
     dev: true
 
   /emmet/2.3.6:
@@ -2660,6 +2696,11 @@ packages:
       mimic-fn: 4.0.0
     dev: true
 
+  /opencollective-postinstall/2.0.3:
+    resolution: {integrity: sha512-8AV/sCtuzUeTo8gQK5qDZzARrulB3egtLzFgteqB2tcT4Mw7B8Kt7JcDHmltjz6FOAHsvTevk70gZEbhM4ZS9Q==}
+    hasBin: true
+    dev: true
+
   /ora/6.1.0:
     resolution: {integrity: sha512-CxEP6845hLK+NHFWZ+LplGO4zfw4QSfxTlqMfvlJ988GoiUeZDMzCvqsZkFHv69sPICmJH1MDxZoQFOKXerAVw==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
@@ -3319,6 +3360,14 @@ packages:
       pascal-case: 3.1.2
       svelte: 3.48.0
       typescript: 4.6.4
+    dev: true
+
+  /swup/2.0.14:
+    resolution: {integrity: sha512-a+Ihye+rTOwyW7T/vJYwGEKy9kJwc4twwlBryoKZY6WNutQOdpWUKmCkJdvkrDNIqBAvIqpsGUW1NJvoxZxP8w==}
+    requiresBuild: true
+    dependencies:
+      delegate: 3.1.3
+      opencollective-postinstall: 2.0.3
     dev: true
 
   /tailwindcss/3.0.24:

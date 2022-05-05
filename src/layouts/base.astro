@@ -12,18 +12,11 @@ import "../styles/style.scss";
 	<body class="w-full min-h-screen flex flex-col
 	bg-gradient-to-bl bg-fixed from-pink-900/75 to-rose-900/50  text-white">
 		<Nav content={Astro.props.content} />
-		<div class="content">
+		<main id="swup" class="content">
 			<slot />
-		</div>
-		<Footer />	
+		</main>
+		<Footer />
 
-		<script is:inline>
-			function rgb() {
-				document.body.style.transitionDuration = "1s";
-				setInterval(() => {
-					document.body.style.backgroundColor = "rgb(" + (Math.random() * 255) + ", " + (Math.random() * 255) + ", " + (Math.random() * 255) + ")";
-				}, 1000);
-			}
-		</script>
+		<script src="../script.js"></script>
 	</body>
 </html>
