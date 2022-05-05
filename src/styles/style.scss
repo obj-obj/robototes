@@ -4,13 +4,13 @@
 
 * {
 	font-family: "Fira Sans";
-	font-size: 20px;
 	text-align: justify;
 	scroll-behavior: smooth;
 }
 
 html,
 body {
+	font-size: 20px;
 	transition-duration: 1s;
 }
 
@@ -24,6 +24,11 @@ footer {
 
 	* {
 		margin-block: 0.67em;
+		@apply rounded;
+	}
+
+	img {
+		@apply m-5 w-auto h-20;
 	}
 
 	h1 {

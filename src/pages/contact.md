@@ -1,9 +1,7 @@
 ---
 title: Contact Us
-layout: /src/layouts/base.astro
+layout: /src/layouts/page.astro
 ---
-
-# Contact Us
 
 Team Captain: captain@robototes.com
 

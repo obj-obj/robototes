@@ -3,8 +3,9 @@ lockfileVersion: 5.4
 specifiers:
   '@astrojs/tailwind': ^0.2.1
   '@swup/preload-plugin': ^1.0.3
+  '@swup/scroll-plugin': ^1.1.0
   '@swup/slide-theme': ^1.0.5
-  astro: 1.0.0-beta.24
+  astro: 1.0.0-beta.25
   minhtml: ^1.0.1
   sass: ^1.51.0
   swup: ^2.0.14
@@ -12,8 +13,9 @@ specifiers:
 devDependencies:
   '@astrojs/tailwind': 0.2.1
   '@swup/preload-plugin': 1.0.3
+  '@swup/scroll-plugin': 1.1.0
   '@swup/slide-theme': 1.0.5
-  astro: 1.0.0-beta.24_sass@1.51.0
+  astro: 1.0.0-beta.25_sass@1.51.0
   minhtml: 1.0.1
   sass: 1.51.0
   swup: 2.0.14
@@ -412,6 +414,13 @@ packages:
       swup: 2.0.14
     dev: true
 
+  /@swup/scroll-plugin/1.1.0:
+    resolution: {integrity: sha512-JnSxXzELHTcGr9OE1t/iwMVsr8rcLU9HG7WHdua2ayWF5r/nYr883r0GrJH0ZC6qfvPDwLfSPQhfH6uVS3VhqA==}
+    dependencies:
+      '@swup/plugin': 1.0.1
+      scrl: 1.0.0
+    dev: true
+
   /@swup/slide-theme/1.0.5:
     resolution: {integrity: sha512-0xxqtURSMDScjLMRdNjtxzo8NGCPcmp6VXrQcxIQzQDSAvwNnP8Zw871C+FSL1EMe8OhAzWAP3E3x9vzH+iLHg==}
     dependencies:
@@ -595,8 +604,8 @@ packages:
       tslib: 2.4.0
     dev: true
 
-  /astro/1.0.0-beta.24_sass@1.51.0:
-    resolution: {integrity: sha512-w3VOO+bEf4cm2m33gyiuCxjksiNnnbSCw1yKfpJSyFy5V2dXxnJhifTofq5r/Y+cLupwydLznMJx45ius8qXzA==}
+  /astro/1.0.0-beta.25_sass@1.51.0:
+    resolution: {integrity: sha512-oiR0KXScF5GBCDGnaoOlz7S4LmDbiGnBGnYXUp47dzdmyAuQkNO0+tim70DVNrQ4oBDzPsT+UoqhzMIveE6x7A==}
     engines: {node: ^14.15.0 || >=16.0.0, npm: '>=6.14.0'}
     hasBin: true
     dependencies:
@@ -644,7 +653,7 @@ packages:
       prompts: 2.4.2
       recast: 0.20.5
       resolve: 1.22.0
-      rollup: 2.71.1
+      rollup: 2.72.0
       semver: 7.3.7
       shiki: 0.10.1
       sirv: 2.0.2
@@ -673,7 +682,7 @@ packages:
       postcss: ^8.1.0
     dependencies:
       browserslist: 4.20.3
-      caniuse-lite: 1.0.30001335
+      caniuse-lite: 1.0.30001336
       fraction.js: 4.2.0
       normalize-range: 0.1.2
       picocolors: 1.0.0
@@ -733,7 +742,7 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001335
+      caniuse-lite: 1.0.30001336
       electron-to-chromium: 1.4.134
       escalade: 3.1.1
       node-releases: 2.0.4
@@ -775,8 +784,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /caniuse-lite/1.0.30001335:
-    resolution: {integrity: sha512-ddP1Tgm7z2iIxu6QTtbZUv6HJxSaV/PZeSrWFZtbY4JZ69tOeNhBCl3HyRQgeNZKE5AOn1kpV7fhljigy0Ty3w==}
+  /caniuse-lite/1.0.30001336:
+    resolution: {integrity: sha512-/YxSlBmL7iKXTbIJ48IQTnAOBk7XmWsxhBF1PZLOko5Dt9qc4Pl+84lfqG3Tc4EuavurRn1QLoVJGxY2iSycfw==}
     dev: true
 
   /ccount/2.0.1:
@@ -3078,8 +3087,8 @@ packages:
     engines: {iojs: '>=1.0.0', node: '>=0.10.0'}
     dev: true
 
-  /rollup/2.71.1:
-    resolution: {integrity: sha512-lMZk3XfUBGjrrZQpvPSoXcZSfKcJ2Bgn+Z0L1MoW2V8Wh7BVM+LOBJTPo16yul2MwL59cXedzW1ruq3rCjSRgw==}
+  /rollup/2.72.0:
+    resolution: {integrity: sha512-KqtR2YcO35/KKijg4nx4STO3569aqCUeGRkKWnJ6r+AvBBrVY9L4pmf4NHVrQr4mTOq6msbohflxr2kpihhaOA==}
     engines: {node: '>=10.0.0'}
     hasBin: true
     optionalDependencies:
@@ -3115,6 +3124,10 @@ packages:
       chokidar: 3.5.3
       immutable: 4.0.0
       source-map-js: 1.0.2
+    dev: true
+
+  /scrl/1.0.0:
+    resolution: {integrity: sha512-nTS2W6UyxYfvOOjeXGXM1j140bm2ZUIjt0mEyGUHecFz2zU1CMYJ71dWPdlnSJR2mYOojY1R5qpo4Fi83O7tog==}
     dev: true
 
   /section-matter/1.0.0:
@@ -3655,7 +3668,7 @@ packages:
       esbuild: 0.14.38
       postcss: 8.4.13
       resolve: 1.22.0
-      rollup: 2.71.1
+      rollup: 2.72.0
       sass: 1.51.0
     optionalDependencies:
       fsevents: 2.3.2

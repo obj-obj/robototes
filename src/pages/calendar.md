@@ -1,6 +1,6 @@
 ---
 title: Calendar
-layout: /src/layouts/base.astro
+layout: /src/layouts/page.astro
 ---
 
 ## Robototes (Team 2412)

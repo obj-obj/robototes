@@ -1,0 +1,8 @@
+---
+import Base from "./base.astro";
+---
+
+<Base content={Astro.props.content}>
+	<h1>{Astro.props.content.title}</h1>
+	<slot />
+</Base>
