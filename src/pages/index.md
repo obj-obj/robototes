@@ -9,7 +9,7 @@ layout: /src/layouts/base.astro
 
 #### Note:
 
-This is an experimental (unofficial) rewrite of the site that's mostly a skeleton currently. It will be shown to leadership some time in the future.
+This is an experimental (unofficial) rewrite of the site. It will be shown to leadership soon™.
 
 ## Who are we?
 
