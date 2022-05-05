@@ -1,10 +1,10 @@
 ---
-import Base from "../layouts/page.astro";
+import Page from "../layouts/page.astro";
 import {Markdown} from "astro/components";
 ---
 
-<Base><Markdown>
-# 404
-
+<Page content={{
+	title: "404"
+}}><Markdown>
 Remy can't find this page
-</Markdown></Base>
+</Markdown></Page>
