@@ -26,11 +26,8 @@ If you're interested in sponsoring our team, please reach out to: business@robot
 To ensure your donation goes directly to our team, please follow these steps:
 
 1. Go to [This form](https://wa-bellevue-lite.intouchreceipting.com/sammamishhighschoolasb)
-
 2. Select "Robotics Club"
-
 3. Enter the amount you wish to donate, then check out
-
 4. Accept the sincere thanks from Team 2412!
 
 All donations are tax deductible.
