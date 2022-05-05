@@ -31,6 +31,14 @@ footer {
 		@apply m-5 w-auto h-20;
 	}
 
+	ul {
+		@apply list-disc;
+	}
+
+	ol {
+		@apply list-decimal;
+	}
+
 	h1 {
 		@apply text-5xl;
 	}
@@ -68,6 +76,10 @@ footer {
 .nav-dropdown-content {
 	transition-duration: 0.25s;
 	@apply absolute z-10 opacity-0 pointer-events-none translate-y-5 p-1 bg-[#44091b] rounded-md border border-slate-500;
+}
+
+.nav-dropdown-content .navlink {
+	@apply w-full;
 }
 
 .nav-dropdown:hover .nav-dropdown-content {
