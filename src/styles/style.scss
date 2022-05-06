@@ -80,10 +80,15 @@ footer {
 // Nav
 nav {
 	font-size: 20px;
+	@apply flex flex-col md:flex-row md:items-stretch w-full md:h-14 bg-black/25;
+}
+
+#navtoggle:checked + #navlinks {
+	@apply block;
 }
 
 .navlink {
-	@apply w-max h-full flex items-center p-1 px-2 hover:bg-black/25;
+	@apply w-full md:w-max h-full flex items-center p-1 px-2 hover:bg-black/25;
 }
 
 .nav-dropdown {
