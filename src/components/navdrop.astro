@@ -1,13 +1,15 @@
 ---
 import Navlink from "./navlink.astro";
 
-const {href, title} = Astro.props;
+const {href, pages, title} = Astro.props;
 ---
 
 <div class="nav-dropdown">
-	<Navlink {href}>{title}</Navlink>
+	<Navlink {href}><slot /></Navlink>
 
 	<div class="nav-dropdown-content">
-		<slot />
+		{pages.map(page => (
+			<Navlink href={page.url}>{page.frontmatter.title}</Navlink>
+		))}
 	</div>
 </div>

@@ -1,6 +1,10 @@
 ---
-import Navdrop from './navdrop.astro';
+import Navdrop from "./navdrop.astro";
 import Navlink from "./navlink.astro";
+
+const about = await Astro.glob("../pages/about/*");
+const outreach = await Astro.glob("../pages/outreach/*");
+const resources = await Astro.glob("../pages/resources/*");
 ---
 
 <nav>
@@ -14,32 +18,10 @@ import Navlink from "./navlink.astro";
 
 	<div id="navlinks" class="hidden md:flex flex-col md:flex-row items-baseline md:items-center">
 		<Navlink href="/">Home</Navlink>
-
-		<Navdrop title="About" href="/about/">
-			<Navlink href="/about/first/">FIRST</Navlink>
-			<Navlink href="/about/bots/">Robototes Bots</Navlink>
-			<Navlink href="/about/leadership/">Student Leadership</Navlink>
-			<Navlink href="/about/mentors/">Mentors</Navlink>
-			<Navlink href="/about/sponsors/">Sponsors</Navlink>
-			<Navlink href="/about/find_us/">Find Us</Navlink>
-		</Navdrop>
-
-		<Navdrop title="Outreach" href="/outreach/">
-			<Navlink href="/outreach/flla/">FLLA Bellevue</Navlink>
-			<Navlink href="/outreach/equity/">Equity Initiative</Navlink>
-			<Navlink href="/outreach/camp/">Summer Camp</Navlink>
-			<Navlink href="/outreach/resources/">Resources</Navlink>
-			<Navlink href="/outreach/guidelines/">Guidelines</Navlink>
-		</Navdrop>
-
-		<Navdrop title="Resources" href="/resources/">
-			<Navlink href="/resources/chairman/">Chairman</Navlink>
-			<Navlink href="/resources/documents">Documents</Navlink>
-			<Navlink href="/resources/technical">Technical</Navlink>
-		</Navdrop>
-
-		<Navlink href="/calendar/">Calendar</Navlink>
-
-		<Navlink href="/contact/">Contact Us</Navlink>
+		<Navdrop href="/about" pages={about}>About</Navdrop>
+		<Navdrop href="/outreach" pages={outreach}>Outreach</Navdrop>
+		<Navdrop href="/resources" pages={resources}>Resources</Navdrop>
+		<Navlink href="/calendar">Calendar</Navlink>
+		<Navlink href="/contact">Contact Us</Navlink>
 	</div>
 </nav>
