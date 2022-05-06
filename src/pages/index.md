@@ -7,10 +7,6 @@ layout: /src/layouts/base.astro
 
 # The Robototes
 
-#### Note:
-
-This is an experimental (unofficial) rewrite of the site. It will be shown to leadership soon™.
-
 ## Who are we?
 
 We are the Robototes, [Sammamish High School](https://bsd405.org/sammamish)'s FIRST Robotics team. We have participated in [FRC](https://firstinspires.org/robotics/frc) (FIRST Robotics Completition) since 2008.
@@ -26,3 +22,7 @@ As well as participate in FRC, we also spread the mission of FIRST in our commun
 ## Thank you to our [Sponsors](/about/sponsors/)!
 
 <Sponsors />
+
+#### Credit:
+
+This website's visual design is heavily inspired by https://quiltmc.org.
