@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 // Variables
-$background: #290610;
+$background: #300807;
 $font: "Fira Sans";
 $font-size: 18px;
 $navbar-font-size: 20px;
@@ -87,7 +87,7 @@ footer {
 // Navbar
 nav {
 	font-size: $navbar-font-size;
-	@apply w-full md:h-14 bg-black/25 flex flex-col md:flex-row md:items-stretch;
+	@apply w-full md:h-12 bg-black/25 flex flex-col md:flex-row md:items-stretch;
 }
 
 #navtoggle:checked + #navlinks {
