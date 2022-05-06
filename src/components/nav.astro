@@ -4,12 +4,12 @@ import Navlink from "./navlink.astro";
 ---
 
 <nav>
-	<a class="flex items-center p-1" href="/">
+	<a class="p-1 flex items-center" href="/">
 		<img src="/assets/robototes.png" class="h-8 md:h-full mr-1">
 		Robototes
 	</a>
 
-	<label for="navtoggle" class="p-1 cursor-pointer md:hidden">Toggle Navbar</label>
+	<label for="navtoggle" class="cursor-pointer p-1 md:hidden">Toggle Navbar</label>
 	<input id="navtoggle" type="checkbox" class="hidden" />
 
 	<div id="navlinks" class="hidden md:flex flex-col md:flex-row items-baseline md:items-center">

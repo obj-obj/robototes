@@ -1,25 +1,33 @@
+@import url("https://code.cdn.mozilla.net/fonts/fira.css");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+// Variables
+$background: #290610;
+$font: "Fira Sans";
+$font-size: 18px;
+$navbar-font-size: 20px;
+
 * {
-	font-family: "Fira Sans";
+	font-family: $font;
 	text-align: justify;
 	scroll-behavior: smooth;
 }
 
-html,
 body {
-	@apply items-center;
+	background-color: $background;
 }
 
 iframe {
 	@apply w-full h-screen;
 }
 
+// Styles within are only applied to the main content and footer, the navbar is not included
 .content,
 footer {
-	font-size: 18px;
+	font-size: $font-size;
 	@apply px-10;
 
 	* {
@@ -27,21 +35,24 @@ footer {
 		@apply rounded;
 	}
 
-	img {
-		@apply m-2.5 w-auto max-h-20;
-	}
-
+	// ALl lists
 	ul,
 	ol {
 		@apply ml-5;
 	}
 
+	// Unordered lists
 	ul {
 		@apply list-disc;
 	}
 
+	// Ordered lists
 	ol {
 		@apply list-decimal;
+	}
+
+	img {
+		@apply w-auto max-h-20 m-2.5;
 	}
 
 	h1 {
@@ -73,33 +84,33 @@ footer {
 	}
 }
 
-.content {
-	@apply w-full max-w-screen-xl;
-}
-
-// Nav
+// Navbar
 nav {
-	font-size: 20px;
-	@apply flex flex-col md:flex-row md:items-stretch w-full md:h-14 bg-black/25;
+	font-size: $navbar-font-size;
+	@apply w-full md:h-14 bg-black/25 flex flex-col md:flex-row md:items-stretch;
 }
 
 #navtoggle:checked + #navlinks {
 	@apply block;
 }
 
+// Link in navbar
 .navlink {
-	@apply w-full md:w-max h-full flex items-center p-1 px-2 hover:bg-black/25;
+	@apply w-full md:w-max h-full hover:bg-black/25 p-1 px-2 flex items-center;
 }
 
+// Container that holds navbar dropdown and link
 .nav-dropdown {
 	@apply h-full;
 }
 
+// Navbar dropdown
 .nav-dropdown-content {
 	transition-duration: 0.25s;
 	@apply md:absolute md:z-10 md:opacity-0 md:pointer-events-none md:translate-y-5 ml-2 md:ml-0 md:p-1 md:bg-[#44091b] md:rounded-md md:border md:border-slate-500;
 }
 
+// Links in navbar dropdown
 .nav-dropdown-content .navlink {
 	@apply md:w-full;
 }
