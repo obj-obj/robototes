@@ -10,7 +10,7 @@
 
 html,
 body {
-	font-size: 20px;
+	@apply items-center;
 }
 
 iframe {
@@ -19,7 +19,8 @@ iframe {
 
 .content,
 footer {
-	@apply pl-10 pr-10;
+	font-size: 18px;
+	@apply px-10;
 
 	* {
 		margin-block: 0.67em;
@@ -72,13 +73,21 @@ footer {
 	}
 }
 
+.content {
+	@apply w-full max-w-screen-xl;
+}
+
 // Nav
+nav {
+	font-size: 20px;
+}
+
 .navlink {
-	@apply w-max flex items-center h-full p-1 border-black hover:bg-black/25;
+	@apply w-max h-full flex items-center p-1 px-2 hover:bg-black/25;
 }
 
 .nav-dropdown {
-	@apply border-black;
+	@apply h-full;
 }
 
 .nav-dropdown-content {

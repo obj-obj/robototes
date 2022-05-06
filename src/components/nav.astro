@@ -3,13 +3,13 @@ import Navdrop from './navdrop.astro';
 import Navlink from "./navlink.astro";
 ---
 
-<nav class="flex flex-col md:flex-row md:items-stretch w-full md:h-8 bg-black/25">
+<nav class="flex flex-col md:flex-row md:items-stretch w-full md:h-14 bg-black/25">
 	<a class="flex items-center p-1" href="/">
 		<img src="/assets/robototes.png" class="h-8 md:h-full mr-1">
 		Robototes
 	</a>
 
-	<div class="flex flex-col md:flex-row items-baseline md:items-center md:divide-x">
+	<div class="flex flex-col md:flex-row items-baseline md:items-center">
 		<Navlink href="/">Home</Navlink>
 
 		<Navdrop title="About" href="/about/">
