@@ -8,8 +8,8 @@ if (sidebar) {
 ---
 
 <Base content={Astro.props.content}>
-	<div id="swup" class="w-full flex justify-center">
-		{sidebar && (headers.length > 0) && <div class="h-min mt-10 top-10 sticky bg-secondary rounded border border-slate-500 flex flex-col text-lg">
+	<div class="w-full flex flex-col md:flex-row justify-center">
+		{sidebar && (headers.length > 0) && <div class="h-min mx-5 mt-10 top-10 md:sticky bg-secondary rounded border border-slate-500 flex flex-col text-lg">
 			<p class="px-2 pt-2 text-sm">Contents</p>
 			<hr>
 			{headers.map(header => (
