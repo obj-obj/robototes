@@ -7,7 +7,7 @@ const {headers} = Astro.props.content.astro;
 
 <Base content={Astro.props.content}>
 	<div id="swup" class="w-full flex justify-center">
-		{sidebar && <div class="h-min mt-10 top-10 sticky bg-secondary rounded border border-slate-500 flex flex-col text-lg">
+		{sidebar && (headers.length > 0) && <div class="h-min mt-10 top-10 sticky bg-secondary rounded border border-slate-500 flex flex-col text-lg">
 			<p class="px-2 pt-2 text-sm">Contents</p>
 			<hr>
 			{headers.map(header => (
