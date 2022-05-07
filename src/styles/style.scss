@@ -21,7 +21,7 @@ footer {
 	@apply px-10;
 
 	* {
-		@apply my-[0.67em] px-1 rounded;
+		@apply my-[0.67em] rounded;
 	}
 
 	:target {
@@ -46,6 +46,15 @@ footer {
 
 	img {
 		@apply w-auto max-h-20 m-2.5;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@apply px-1;
 	}
 
 	h1 {
