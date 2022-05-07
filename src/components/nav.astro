@@ -14,9 +14,9 @@ import Navlink from "./navlink.astro";
 
 	<div id="navlinks" class="hidden md:flex flex-col md:flex-row items-baseline md:items-center">
 		<Navlink href="/">Home</Navlink>
-		<Navdrop href="/about" pages={await Astro.glob("../pages/about/*")}>About</Navdrop>
-		<Navdrop href="/outreach" pages={await Astro.glob("../pages/outreach/*")}>Outreach</Navdrop>
-		<Navdrop href="/resources" pages={await Astro.glob("../pages/resources/*")}>Resources</Navdrop>
+		<Navdrop href="/about" pages={await Astro.glob("../pages/about/!(index.md)")}>About</Navdrop>
+		<Navdrop href="/outreach" pages={await Astro.glob("../pages/outreach/!(index.md)")}>Outreach</Navdrop>
+		<Navdrop href="/resources" pages={await Astro.glob("../pages/resources/!(index.md)")}>Resources</Navdrop>
 		<Navlink href="/calendar">Calendar</Navlink>
 		<Navlink href="/contact">Contact Us</Navlink>
 	</div>

@@ -2,7 +2,7 @@
 import * as site from "../site";
 import "../styles/style.scss";
 
-const {content = {}} = Astro.props;
+const {content = {}, description} = Astro.props;
 const title = content.title ? (content.title + " | " + site.title) : (site.title);
 ---
 
@@ -14,6 +14,7 @@ const title = content.title ? (content.title + " | " + site.title) : (site.title
 	<title>{title}</title>
 
 	<meta property="og:title" content={title}>
+	{description && <meta property="og:description" content={description}>}
 	<meta property="og:site_name" content="Robototes">
 	<meta property="og:type" content="website">
 	<link rel="canonical" content={Astro.canonicalURL}>
