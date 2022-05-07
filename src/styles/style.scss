@@ -21,8 +21,11 @@ footer {
 	@apply px-10;
 
 	* {
-		margin-block: 0.67em;
-		@apply rounded;
+		@apply my-[0.67em] px-1 rounded;
+	}
+
+	:target {
+		@apply bg-rose-900;
 	}
 
 	// ALl lists

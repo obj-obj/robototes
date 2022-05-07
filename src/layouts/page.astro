@@ -2,7 +2,9 @@
 import Base from "./base.astro";
 
 const {sidebar = true} = Astro.props.content;
-const {headers} = Astro.props.content.astro;
+let {headers} = Astro.props.content.astro;
+if (sidebar) {
+}
 ---
 
 <Base content={Astro.props.content}>
@@ -11,7 +13,7 @@ const {headers} = Astro.props.content.astro;
 			<p class="px-2 pt-2 text-sm">Contents</p>
 			<hr>
 			{headers.map(header => (
-				<a class="w-full h-max p-2 hover:bg-black/25 active:bg-black/25 rounded" href={"#" + header.slug}>{header.text}</a>
+				<a class={"w-full h-max p-2 hover:bg-black/25 active:bg-black/25 rounded pl-" + (header.depth + 1)} href={"#" + header.slug}>{header.text}</a>
 			))}
 		</div>}
 
