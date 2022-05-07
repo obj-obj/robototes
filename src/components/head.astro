@@ -13,5 +13,11 @@ const title = content.title ? (content.title + " | " + site.title) : (site.title
 
 	<title>{title}</title>
 
-	<!-- TODO add Open Graph Protocol tags -->
+	<meta property="og:title" content={title}>
+	<meta property="og:site_name" content="Robototes">
+	<meta property="og:type" content="website">
+	<link rel="canonical" content={Astro.canonicalURL}>
+	<meta property="og:url" content={Astro.request.url}>
+	<meta property="og:image" content="/assets/robototes.png">
+	<meta property="og:locale" content="en_US">
 </head>

@@ -1,24 +1,18 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@astrojs/sitemap': ^0.1.0
   '@astrojs/tailwind': ^0.2.1
-  '@swup/preload-plugin': ^1.0.3
-  '@swup/scroll-plugin': ^1.1.0
-  '@swup/slide-theme': ^1.0.5
   astro: 1.0.0-beta.27
   minhtml: ^1.0.1
   sass: ^1.51.0
-  swup: ^2.0.14
 
 devDependencies:
+  '@astrojs/sitemap': 0.1.0
   '@astrojs/tailwind': 0.2.1
-  '@swup/preload-plugin': 1.0.3
-  '@swup/scroll-plugin': 1.1.0
-  '@swup/slide-theme': 1.0.5
   astro: 1.0.0-beta.27_sass@1.51.0
   minhtml: 1.0.1
   sass: 1.51.0
-  swup: 2.0.14
 
 packages:
 
@@ -83,6 +77,12 @@ packages:
   /@astrojs/prism/0.4.1:
     resolution: {integrity: sha512-JxkrXFiFhfunOFBI2Xxwru9t4IzrLw+nfA7RkNnV8qP65BLidrwWS+NfZhOSVGTrbf+cQfF8QNe6O4gAX8wQHw==}
     engines: {node: ^14.15.0 || >=16.0.0}
+    dev: true
+
+  /@astrojs/sitemap/0.1.0:
+    resolution: {integrity: sha512-m7xY1tzDYJQwnPeMYJQDwYaVQFdDyp3t7AK2Da1z5l+B8UDEUisfOkJh34QO641++DC3lRHYm4TKh1FLESuuyA==}
+    dependencies:
+      sitemap: 7.1.1
     dev: true
 
   /@astrojs/svelte-language-integration/0.1.4_typescript@4.6.4:
@@ -402,35 +402,6 @@ packages:
       tsm: 2.2.1
     dev: true
 
-  /@swup/plugin/1.0.1:
-    resolution: {integrity: sha512-QrTGn1DLx+50CNsk6oGzUFnyNyLkDK6iLb032qKImmAXS+0Dd1cwa8cSGvJ+I27J4qR8y6oJNurgHIEc6ZCTrg==}
-    dev: true
-
-  /@swup/preload-plugin/1.0.3:
-    resolution: {integrity: sha512-Au2v5kwwrY2WFYEmRoHa8FXMq7S/7KgO+iG2n5IOS7CZfVilIpqTIEQQ8y7TZsQuL6+Pk/57aycYywVLZ8tc3w==}
-    dependencies:
-      '@swup/plugin': 1.0.1
-      delegate: 3.2.0
-      swup: 2.0.14
-    dev: true
-
-  /@swup/scroll-plugin/1.1.0:
-    resolution: {integrity: sha512-JnSxXzELHTcGr9OE1t/iwMVsr8rcLU9HG7WHdua2ayWF5r/nYr883r0GrJH0ZC6qfvPDwLfSPQhfH6uVS3VhqA==}
-    dependencies:
-      '@swup/plugin': 1.0.1
-      scrl: 1.0.0
-    dev: true
-
-  /@swup/slide-theme/1.0.5:
-    resolution: {integrity: sha512-0xxqtURSMDScjLMRdNjtxzo8NGCPcmp6VXrQcxIQzQDSAvwNnP8Zw871C+FSL1EMe8OhAzWAP3E3x9vzH+iLHg==}
-    dependencies:
-      '@swup/theme': 1.0.7
-    dev: true
-
-  /@swup/theme/1.0.7:
-    resolution: {integrity: sha512-OINEaf34fYs90l7/YUUKfOf+paY7/FDhOBLwYxrD0w1OjBiItZpw3N+ATA/QklJwmoUu3KkDFOaQG0zT4KxmmA==}
-    dev: true
-
   /@types/acorn/4.0.6:
     resolution: {integrity: sha512-veQTnWP+1D/xbxVrPC3zHnCZRjSrKfhbMUlEA43iMZLu7EsnTtkJklIuwrCPbOi8YkvDQAiW05VQQFvvz9oieQ==}
     dependencies:
@@ -483,12 +454,22 @@ packages:
       '@types/unist': 2.0.6
     dev: true
 
+  /@types/node/17.0.31:
+    resolution: {integrity: sha512-AR0x5HbXGqkEx9CadRH3EBYx/VkiUgZIhP4wvPn/+5KIsgpNoyFaRlVe0Zlx9gRtg8fA06a9tskE2MSN7TcG4Q==}
+    dev: true
+
   /@types/parse5/6.0.3:
     resolution: {integrity: sha512-SuT16Q1K51EAVPz1K29DJ/sXjhSQ0zjvsypYJ6tlwVsRV9jwW5Adq2ch8Dq8kDBCkYnELS7N7VNCSB5nC56t/g==}
     dev: true
 
   /@types/resolve/1.20.2:
     resolution: {integrity: sha512-60BCwRFOZCQhDncwQdxxeOEEkbc5dIMccYLwbxsS4TUNeVECQ/pBJ0j09mrHOl/JJvpRPGwO9SvE4nR2Nb/a4Q==}
+    dev: true
+
+  /@types/sax/1.2.4:
+    resolution: {integrity: sha512-pSAff4IAxJjfAXUG6tFkO7dsSbTmf8CtUpfhhZ5VhkRpC4628tJhh3+V6H1E+/Gs9piSzYKT5yzHO5M4GG9jkw==}
+    dependencies:
+      '@types/node': 17.0.31
     dev: true
 
   /@types/unist/2.0.6:
@@ -644,7 +625,7 @@ packages:
       mime: 3.0.0
       ora: 6.1.0
       path-browserify: 1.0.1
-      path-to-regexp: 6.2.0
+      path-to-regexp: 6.2.1
       postcss: 8.4.13
       postcss-load-config: 3.1.4_postcss@8.4.13
       preferred-pm: 3.0.3
@@ -985,14 +966,6 @@ packages:
 
   /defined/1.0.0:
     resolution: {integrity: sha1-yY2bzvdWdBiOEQlpFRGZ45sfppM=}
-    dev: true
-
-  /delegate/3.1.3:
-    resolution: {integrity: sha1-moJRp3fXAl+qVXN7w7BxdCEnqf0=}
-    dev: true
-
-  /delegate/3.2.0:
-    resolution: {integrity: sha512-IofjkYBZaZivn0V8nnsMJGBr4jVLxHDheKSW88PyxS5QC4Vo9ZbZVvhzlSxY87fVq3STR6r+4cGepyHkcWOQSw==}
     dev: true
 
   /dequal/2.0.2:
@@ -2718,11 +2691,6 @@ packages:
       mimic-fn: 4.0.0
     dev: true
 
-  /opencollective-postinstall/2.0.3:
-    resolution: {integrity: sha512-8AV/sCtuzUeTo8gQK5qDZzARrulB3egtLzFgteqB2tcT4Mw7B8Kt7JcDHmltjz6FOAHsvTevk70gZEbhM4ZS9Q==}
-    hasBin: true
-    dev: true
-
   /ora/6.1.0:
     resolution: {integrity: sha512-CxEP6845hLK+NHFWZ+LplGO4zfw4QSfxTlqMfvlJ988GoiUeZDMzCvqsZkFHv69sPICmJH1MDxZoQFOKXerAVw==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
@@ -2833,8 +2801,8 @@ packages:
     resolution: {integrity: sha512-LDJzPVEEEPR+y48z93A0Ed0yXb8pAByGWo/k5YYdYgpY2/2EsOsksJrq7lOHxryrVOn1ejG6oAp8ahvOIQD8sw==}
     dev: true
 
-  /path-to-regexp/6.2.0:
-    resolution: {integrity: sha512-f66KywYG6+43afgE/8j/GoiNyygk/bnoCbps++3ErRKsIYkGGupyv07R2Ok5m9i67Iqc+T2g1eAUGUPzWhYTyg==}
+  /path-to-regexp/6.2.1:
+    resolution: {integrity: sha512-JLyh7xT1kizaEvcaXOQwOc2/Yhw6KZOvPf1S8401UyLk86CU79LN3vl7ztXGm/pZ+YjoyAJ4rxmHwbkBXJX+yw==}
     dev: true
 
   /picocolors/1.0.0:
@@ -3154,8 +3122,8 @@ packages:
       source-map-js: 1.0.2
     dev: true
 
-  /scrl/1.0.0:
-    resolution: {integrity: sha512-nTS2W6UyxYfvOOjeXGXM1j140bm2ZUIjt0mEyGUHecFz2zU1CMYJ71dWPdlnSJR2mYOojY1R5qpo4Fi83O7tog==}
+  /sax/1.2.4:
+    resolution: {integrity: sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==}
     dev: true
 
   /section-matter/1.0.0:
@@ -3228,6 +3196,17 @@ packages:
 
   /sisteransi/1.0.5:
     resolution: {integrity: sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==}
+    dev: true
+
+  /sitemap/7.1.1:
+    resolution: {integrity: sha512-mK3aFtjz4VdJN0igpIJrinf3EO8U8mxOPsTBzSsy06UtjZQJ3YY3o3Xa7zSc5nMqcMrRwlChHZ18Kxg0caiPBg==}
+    engines: {node: '>=12.0.0', npm: '>=5.6.0'}
+    hasBin: true
+    dependencies:
+      '@types/node': 17.0.31
+      '@types/sax': 1.2.4
+      arg: 5.0.1
+      sax: 1.2.4
     dev: true
 
   /slash/4.0.0:
@@ -3407,14 +3386,6 @@ packages:
       pascal-case: 3.1.2
       svelte: 3.48.0
       typescript: 4.6.4
-    dev: true
-
-  /swup/2.0.14:
-    resolution: {integrity: sha512-a+Ihye+rTOwyW7T/vJYwGEKy9kJwc4twwlBryoKZY6WNutQOdpWUKmCkJdvkrDNIqBAvIqpsGUW1NJvoxZxP8w==}
-    requiresBuild: true
-    dependencies:
-      delegate: 3.1.3
-      opencollective-postinstall: 2.0.3
     dev: true
 
   /tailwindcss/3.0.24:
