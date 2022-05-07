@@ -2,7 +2,8 @@
 setup: |
   import Sponsors from "/src/components/sponsors.astro";
 title: Home
-layout: /src/layouts/base.astro
+sidebar: false
+layout: /src/layouts/page.astro
 ---
 
 # The Robototes

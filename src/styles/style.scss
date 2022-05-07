@@ -4,20 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
-// Variables
-$background: #300807;
-$font: "Fira Sans";
-$font-size: 18px;
-$navbar-font-size: 20px;
-
 * {
-	font-family: $font;
+	font-family: "Fira Sans";
 	text-align: justify;
 	scroll-behavior: smooth;
-}
-
-body {
-	background-color: $background;
 }
 
 iframe {
@@ -27,7 +17,7 @@ iframe {
 // Styles within are only applied to the main content and footer, the navbar is not included
 .content,
 footer {
-	font-size: $font-size;
+	font-size: 18px;
 	@apply px-10;
 
 	* {
@@ -85,18 +75,13 @@ footer {
 }
 
 // Navbar
-nav {
-	font-size: $navbar-font-size;
-	@apply w-full md:h-12 bg-black/25 flex flex-col md:flex-row md:items-stretch;
-}
-
 #navtoggle:checked + #navlinks {
 	@apply block;
 }
 
 // Link in navbar
 .navlink {
-	@apply w-full md:w-max h-full hover:bg-black/25 p-1 px-2 flex items-center;
+	@apply w-full md:w-max h-full hover:bg-black/25 p-1 px-2 rounded flex items-center;
 }
 
 // Container that holds navbar dropdown and link
@@ -107,7 +92,7 @@ nav {
 // Navbar dropdown
 .nav-dropdown-content {
 	transition-duration: 0.25s;
-	@apply md:absolute md:z-10 md:opacity-0 md:pointer-events-none md:translate-y-5 ml-2 md:ml-0 md:p-1 md:bg-[#44091b] md:rounded-md md:border md:border-slate-500;
+	@apply md:absolute md:z-10 md:opacity-0 md:pointer-events-none md:translate-y-5 ml-2 md:ml-0 md:bg-secondary md:rounded-md md:border md:border-slate-500;
 }
 
 // Links in navbar dropdown

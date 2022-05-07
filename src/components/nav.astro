@@ -1,13 +1,9 @@
 ---
 import Navdrop from "./navdrop.astro";
 import Navlink from "./navlink.astro";
-
-const about = await Astro.glob("../pages/about/*");
-const outreach = await Astro.glob("../pages/outreach/*");
-const resources = await Astro.glob("../pages/resources/*");
 ---
 
-<nav>
+<nav class="w-full md:h-12 bg-black/25 flex flex-col md:flex-row md:items-stretch text-lg">
 	<a class="p-1 flex items-center" href="/">
 		<img src="/assets/robototes.png" class="h-8 md:h-full mr-1">
 		Robototes
@@ -18,9 +14,9 @@ const resources = await Astro.glob("../pages/resources/*");
 
 	<div id="navlinks" class="hidden md:flex flex-col md:flex-row items-baseline md:items-center">
 		<Navlink href="/">Home</Navlink>
-		<Navdrop href="/about" pages={about}>About</Navdrop>
-		<Navdrop href="/outreach" pages={outreach}>Outreach</Navdrop>
-		<Navdrop href="/resources" pages={resources}>Resources</Navdrop>
+		<Navdrop href="/about" pages={await Astro.glob("../pages/about/*")}>About</Navdrop>
+		<Navdrop href="/outreach" pages={await Astro.glob("../pages/outreach/*")}>Outreach</Navdrop>
+		<Navdrop href="/resources" pages={await Astro.glob("../pages/resources/*")}>Resources</Navdrop>
 		<Navlink href="/calendar">Calendar</Navlink>
 		<Navlink href="/contact">Contact Us</Navlink>
 	</div>

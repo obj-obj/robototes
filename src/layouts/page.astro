@@ -1,8 +1,23 @@
 ---
 import Base from "./base.astro";
+
+const {sidebar = true} = Astro.props.content;
+const {headers} = Astro.props.content.astro;
 ---
 
 <Base content={Astro.props.content}>
-	<h1>{Astro.props.content.title}</h1>
-	<slot />
+	<div id="swup" class="w-full flex justify-center">
+		{sidebar && <div class="h-min mt-10 top-10 sticky bg-secondary rounded border border-slate-500 flex flex-col text-lg">
+			<p class="px-2 pt-2 text-sm">Contents</p>
+			<hr>
+			{headers.map(header => (
+				<a class="w-full h-max p-2 hover:bg-black/25 active:bg-black/25 rounded" href={"#" + header.slug}>{header.text}</a>
+			))}
+		</div>}
+
+		<main class="content w-full max-w-screen-xl">
+			<h1>{Astro.props.content.title}</h1>
+			<slot />
+		</main>
+	</div>
 </Base>
