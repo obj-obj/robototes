@@ -44,37 +44,52 @@ footer {
 		@apply w-auto max-h-20 m-2.5;
 	}
 
+	// Inline code
+	code {
+		@apply bg-[#0d1117];
+	}
+
+	// Code blocks
+	.astro-code {
+		@apply p-2;
+	}
+
+	// Quotes
+	blockquote {
+		@apply pl-2 bg-black/25 border-l-8 border-rose-900 text-lg;
+	}
+
 	h1,
 	h2,
 	h3,
 	h4,
 	h5,
 	h6 {
-		@apply px-1;
+		@apply px-1 font-medium;
 	}
 
 	h1 {
-		@apply text-5xl;
-	}
-
-	h2 {
 		@apply text-4xl;
 	}
 
-	h3 {
+	h2 {
 		@apply text-3xl;
 	}
 
-	h4 {
+	h3 {
 		@apply text-2xl;
 	}
 
-	h5 {
+	h4 {
 		@apply text-xl;
 	}
 
-	h6 {
+	h5 {
 		@apply text-lg;
+	}
+
+	.title {
+		@apply font-normal text-5xl;
 	}
 
 	a {
@@ -95,7 +110,7 @@ iframe {
 
 // Item in navbar
 .navitem {
-	@apply w-full md:w-max h-full hover:bg-black/25 p-1 px-2 rounded flex items-center;
+	@apply w-full md:w-max h-full hover:bg-black/25 p-1 px-2 flex items-center;
 }
 
 // Container that holds navbar dropdown and link
@@ -106,7 +121,7 @@ iframe {
 // Navbar dropdown
 .nav-dropdown-content {
 	transition-duration: 0.25s;
-	@apply md:absolute md:z-10 md:opacity-0 md:pointer-events-none md:translate-y-5 ml-2 md:ml-0 md:bg-secondary md:rounded-md md:border md:border-slate-500;
+	@apply md:absolute md:z-10 md:opacity-0 md:pointer-events-none md:translate-y-5 ml-2 md:ml-0 md:p-1 md:bg-secondary md:rounded-md md:border md:border-slate-500;
 }
 
 // Items in navbar dropdown take full width
@@ -120,6 +135,11 @@ iframe {
 }
 
 /* SIDEBAR */
+
+.sidebar {
+	@apply md:w-1/6 h-min ml-5 md:ml-10 mr-5 mt-10 top-4 overflow-scroll md:sticky bg-secondary rounded border border-slate-500 flex flex-col text-lg;
+	max-height: calc(100vh - 2rem);
+}
 
 .sidebar-item {
 	@apply w-full h-max p-2 hover:bg-black/25 active:bg-black/25 rounded;

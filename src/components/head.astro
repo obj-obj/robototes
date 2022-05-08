@@ -2,7 +2,8 @@
 import * as site from "../site";
 import "../styles/style.scss";
 
-const {content = {}, description} = Astro.props;
+const {content = {}} = Astro.props;
+const {description} = content;
 const title = content.title ? (content.title + " | " + site.title) : (site.title);
 ---
 

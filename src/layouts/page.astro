@@ -9,7 +9,7 @@ sidebar = sidebar && ((headers.length > 0) || pages);
 
 <Base content={Astro.props.content}>
 	<div class="w-full flex flex-col md:flex-row justify-center">
-		{sidebar && <div class="h-min mx-5 mt-10 top-10 md:sticky bg-secondary rounded border border-slate-500 flex flex-col text-lg">
+		{sidebar && <div class="sidebar">
 			{pages && <p class="px-2 pt-2 text-sm">Pages</p>
 			<hr>
 			{pages.map(page => (
@@ -23,8 +23,8 @@ sidebar = sidebar && ((headers.length > 0) || pages);
 			))}}
 		</div>}
 
-		<main class="content w-full max-w-screen-xl mx-10">
-			<h1>{Astro.props.content.title}</h1>
+		<main class="content w-full max-w-screen-xl px-5 md:pl-5 md:pr-12 md:text-justify">
+			<h1 class="title">{Astro.props.content.title}</h1>
 			<slot />
 		</main>
 	</div>

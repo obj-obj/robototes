@@ -14,11 +14,11 @@ import Navitem from "./navitem.astro";
 
 	<div id="navlinks" class="hidden md:flex flex-col md:flex-row items-baseline md:items-center">
 		<Navitem href="/">Home</Navitem>
-		<Navdrop href="/about" pages={await Astro.glob("../pages/about/!(index.md)")}>About</Navdrop>
-		<Navdrop href="/outreach" pages={await Astro.glob("../pages/outreach/!(index.md)")}>Outreach</Navdrop>
+		<Navdrop href="/about/" pages={await Astro.glob("../pages/about/!(index.md)")}>About</Navdrop>
+		<Navdrop href="/outreach/" pages={await Astro.glob("../pages/outreach/!(index.md)")}>Outreach</Navdrop>
 		<Navdrop link=false pages={await Astro.glob("../pages/resources/!(index.md)")}>Resources</Navdrop>
-		<Navitem href="/calendar">Calendar</Navitem>
-		<Navitem href="/contact">Contact Us</Navitem>
-		<Navdrop link=false pages={await Astro.glob("../pages/meta/*")} right=true>...</Navdrop>
+		<Navitem href="/calendar/">Calendar</Navitem>
+		<Navitem href="/contact/">Contact Us</Navitem>
+		<Navdrop link=false pages={await Astro.glob("../pages/meta/index.md")} right=true>...</Navdrop>
 	</div>
 </nav>

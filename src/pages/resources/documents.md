@@ -23,7 +23,7 @@ Powerpoint template: Coming soon
 
 ## [Style Guide](https://1drv.ms/w/s!AiFB59jojVKChqh4AM6Cm8Vg6qicCA)
 
-**Note**: This document is out of date and should be used for reference only.
+__Note__: This document is out of date and should be used for reference only.
 
 ## Branding
 
