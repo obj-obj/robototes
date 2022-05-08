@@ -1,6 +1,6 @@
 ---
 title: Student Leadership
-layout: /src/layouts/page.astro
+layout: /src/layouts/about_page.astro
 ---
 
 TODO

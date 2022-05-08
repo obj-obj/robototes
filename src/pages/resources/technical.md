@@ -1,6 +1,6 @@
 ---
 title: Technical
-layout: /src/layouts/page.astro
+layout: /src/layouts/resources_page.astro
 ---
 
 **Note**: This is old, it hasn't been updated since February 2020.

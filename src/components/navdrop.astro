@@ -1,15 +1,15 @@
 ---
-import Navlink from "./navlink.astro";
+import Navitem from "./navitem.astro";
 
-const {href, pages} = Astro.props;
+const {href, link, pages, right} = Astro.props;
 ---
 
 <div class="nav-dropdown">
-	<Navlink {href}><slot /></Navlink>
+	<Navitem {href} {link}><slot /></Navitem>
 
-	<div class="nav-dropdown-content">
+	<div class={"nav-dropdown-content" + (right ? " right-0" : "")}>
 		{pages.map(page => (
-			<Navlink href={page.url}>{page.frontmatter.title}</Navlink>
+			<Navitem href={page.url}>{page.frontmatter.title}</Navitem>
 		))}
 	</div>
 </div>

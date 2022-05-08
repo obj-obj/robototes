@@ -2,7 +2,7 @@
 setup: |
   import Sponsors from "/src/components/sponsors.astro";
 title: Sponsors
-layout: /src/layouts/page.astro
+layout: /src/layouts/about_page.astro
 ---
 
 Our team's success would not be possible without the generous support of our sponsors!

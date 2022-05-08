@@ -1,6 +1,6 @@
 ---
 title: Find Us
-layout: /src/layouts/page.astro
+layout: /src/layouts/about_page.astro
 ---
 
 Facebook: [Robototes](https://www.facebook.com/Robototes/)

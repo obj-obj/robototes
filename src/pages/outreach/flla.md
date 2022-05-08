@@ -1,6 +1,6 @@
 ---
 title: FLLA Bellevue
-layout: /src/layouts/page.astro
+layout: /src/layouts/outreach_page.astro
 ---
 
 TODO

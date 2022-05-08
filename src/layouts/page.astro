@@ -1,23 +1,29 @@
 ---
 import Base from "./base.astro";
 
-const {sidebar = true} = Astro.props.content;
+const {pages} = Astro.props;
+let {sidebar = true} = Astro.props.content;
 let {headers} = Astro.props.content.astro;
-if (sidebar) {
-}
+sidebar = sidebar && ((headers.length > 0) || pages);
 ---
 
 <Base content={Astro.props.content}>
 	<div class="w-full flex flex-col md:flex-row justify-center">
-		{sidebar && (headers.length > 0) && <div class="h-min mx-5 mt-10 top-10 md:sticky bg-secondary rounded border border-slate-500 flex flex-col text-lg">
-			<p class="px-2 pt-2 text-sm">Contents</p>
+		{sidebar && <div class="h-min mx-5 mt-10 top-10 md:sticky bg-secondary rounded border border-slate-500 flex flex-col text-lg">
+			{pages && <p class="px-2 pt-2 text-sm">Pages</p>
+			<hr>
+			{pages.map(page => (
+				<a class={"sidebar-item" + ((page.url + "/" == Astro.canonicalURL.pathname) ? " sidebar-item-active" : "")} href={page.url}>{page.frontmatter.title}</a>
+			))}}
+
+			{(headers.length > 0) && <p class="px-2 pt-2 text-sm">Contents</p>
 			<hr>
 			{headers.map(header => (
-				<a class={"w-full h-max p-2 hover:bg-black/25 active:bg-black/25 rounded pl-" + (header.depth + 1)} href={"#" + header.slug}>{header.text}</a>
-			))}
+				<a class={"sidebar-item pl-" + (header.depth + 1)} href={"#" + header.slug}>{header.text}</a>
+			))}}
 		</div>}
 
-		<main class="content w-full max-w-screen-xl">
+		<main class="content w-full max-w-screen-xl mx-10">
 			<h1>{Astro.props.content.title}</h1>
 			<slot />
 		</main>

@@ -1,11 +1,11 @@
 ---
 title: Documents
-layout: /src/layouts/page.astro
+layout: /src/layouts/resources_page.astro
 ---
 
 ## Member Handbook (2021-2022)
 
-This document needs to be read and understood by all student members and their families. A signed copy of page 16 must be turned in to the team coach or lead mentor on Monday, 6 January by the end of the meeting.
+This document needs to be read and understood by all student members and their families. A signed copy of resources_page 16 must be turned in to the team coach or lead mentor on Monday, 6 January by the end of the meeting.
 
 #### Links
 

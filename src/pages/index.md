@@ -23,7 +23,3 @@ As well as participate in FRC, we also spread the mission of FIRST in our commun
 ## Thank you to our [Sponsors](/about/sponsors/)!
 
 <Sponsors />
-
-#### Credit:
-
-This website's visual design is heavily inspired by https://quiltmc.org.

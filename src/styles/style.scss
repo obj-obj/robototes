@@ -14,7 +14,6 @@
 .content,
 footer {
 	font-size: 18px;
-	@apply px-10;
 
 	* {
 		@apply my-[0.67em] rounded;
@@ -94,8 +93,8 @@ iframe {
 	@apply block;
 }
 
-// Link in navbar
-.navlink {
+// Item in navbar
+.navitem {
 	@apply w-full md:w-max h-full hover:bg-black/25 p-1 px-2 rounded flex items-center;
 }
 
@@ -110,12 +109,22 @@ iframe {
 	@apply md:absolute md:z-10 md:opacity-0 md:pointer-events-none md:translate-y-5 ml-2 md:ml-0 md:bg-secondary md:rounded-md md:border md:border-slate-500;
 }
 
-// Links in navbar dropdown take full width
-.nav-dropdown-content .navlink {
+// Items in navbar dropdown take full width
+.nav-dropdown-content .navitem {
 	@apply md:w-full;
 }
 
 // Navbar dropdown appears when hovered over
 .nav-dropdown:hover .nav-dropdown-content {
 	@apply md:opacity-100 md:pointer-events-auto md:translate-y-0;
+}
+
+/* SIDEBAR */
+
+.sidebar-item {
+	@apply w-full h-max p-2 hover:bg-black/25 active:bg-black/25 rounded;
+}
+
+.sidebar-item-active {
+	@apply bg-black/25;
 }

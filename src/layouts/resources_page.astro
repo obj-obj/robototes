@@ -1,0 +1,7 @@
+---
+import Page from "./page.astro";
+---
+
+<Page content={Astro.props.content} pages={await Astro.glob("../pages/resources/*")}>
+	<slot />
+</Page>
