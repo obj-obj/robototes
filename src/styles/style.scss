@@ -20,6 +20,20 @@ footer {
 		@apply bg-rose-900;
 	}
 
+	// Tables
+	table {
+		@apply w-full bg-black/25;
+	}
+
+	thead {
+		@apply bg-secondary;
+	}
+
+	th,
+	td {
+		@apply p-2 border border-slate-500;
+	}
+
 	// All lists
 	ul,
 	ol {
@@ -138,7 +152,7 @@ hr {
 // Navbar dropdown
 .nav-dropdown-content {
 	transition-duration: 0.25s;
-	@apply md:absolute md:z-10 md:opacity-0 md:pointer-events-none md:translate-y-5 ml-2 md:ml-0 md:p-1 md:bg-secondary md:rounded-md md:border md:border-slate-500;
+	@apply md:absolute md:z-10 md:opacity-0 md:pointer-events-none md:translate-y-5 ml-2 md:ml-0 md:p-1 md:bg-secondary md:rounded-md md:border border-slate-500;
 }
 
 // Items in navbar dropdown take full width
