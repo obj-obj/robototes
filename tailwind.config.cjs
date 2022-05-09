@@ -7,6 +7,9 @@ module.exports = {
 				primary: "#300807",
 				secondary: "#44091b",
 			},
+			fontFamily: {
+				sans: ['"Fira Sans"'],
+			},
 		},
 	},
 };
