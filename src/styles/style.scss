@@ -150,7 +150,7 @@ hr {
 
 // Navbar dropdown
 .nav-dropdown-content {
-	@apply md:absolute md:z-10 md:opacity-0 md:pointer-events-none md:translate-y-5 ml-2 md:ml-0 md:p-1 md:bg-secondary md:rounded-md duration-[0.25ms] md:border border-slate-500;
+	@apply md:absolute md:z-10 md:opacity-0 md:pointer-events-none md:translate-y-5 ml-2 md:ml-0 md:p-1 md:bg-secondary md:rounded-md duration-[0.25s] md:border border-slate-500;
 }
 
 // Items in navbar dropdown take full width
