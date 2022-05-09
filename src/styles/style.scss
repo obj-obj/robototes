@@ -3,7 +3,7 @@
 // Set font to Fira Sans
 @import url("https://code.cdn.mozilla.net/fonts/fira.css");
 
-// Initialize tailwindcss
+// Initialize Tailwind
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -20,7 +20,7 @@ footer {
 		@apply bg-rose-900;
 	}
 
-	// ALl lists
+	// All lists
 	ul,
 	ol {
 		@apply ml-5;
