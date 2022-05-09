@@ -15,10 +15,6 @@
 footer {
 	font-size: 18px;
 
-	* {
-		@apply my-[0.67em] rounded;
-	}
-
 	// Items become highlighted when they are targeted (for example, when a link in the table of contents is clicked)
 	:target {
 		@apply bg-rose-900;
@@ -66,6 +62,7 @@ footer {
 	h5,
 	h6 {
 		@apply px-1 font-medium;
+		margin-block: 0.67em;
 	}
 
 	h1 {
@@ -97,8 +94,28 @@ footer {
 	}
 }
 
+.content {
+	* {
+		@apply rounded;
+	}
+
+	/* REAPPLY SOME BROWSER DEFAULT STYLES */
+	// Tailwind removes most of the browser's CSS, and this is mostly useful, but some styles need to be reapplied
+	p,
+	dl,
+	multicol {
+		margin-block-start: 1em;
+		margin-block-end: 1em;
+	}
+}
+
 iframe {
-	@apply w-full h-screen;
+	@apply w-full h-[75vh];
+}
+
+// Make horizontal rules always full width
+hr {
+	@apply w-full;
 }
 
 /* NAVBAR */
@@ -147,4 +164,10 @@ iframe {
 
 .sidebar-item-active {
 	@apply bg-black/25;
+}
+
+/* FOOTER */
+
+.footer-column {
+	@apply flex flex-col items-center md:items-start;
 }
