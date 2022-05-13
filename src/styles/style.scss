@@ -51,7 +51,7 @@ footer {
 	}
 
 	img {
-		@apply w-auto max-h-20 m-2.5;
+		@apply w-auto max-h-20 object-scale-down m-2.5;
 	}
 
 	// Inline code
