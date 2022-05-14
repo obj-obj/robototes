@@ -10,7 +10,7 @@ layout: /src/layouts/page.astro
 
 ## Who are we?
 
-We are the Robototes, [Sammamish High School](https://bsd405.org/sammamish)'s FIRST Robotics team. We have participated in [FRC](https://firstinspires.org/robotics/frc) (FIRST Robotics Completition) since 2008.
+We are the Robototes, [Sammamish High School](https://bsd405.org/sammamish)'s FIRST Robotics team. We have participated in [FRC](https://firstinspires.org/robotics/frc) (FIRST Robotics Competition) since 2008.
 
 ## Our Mission:
 

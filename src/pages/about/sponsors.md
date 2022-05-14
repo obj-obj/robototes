@@ -21,7 +21,7 @@ Our team's success would not be possible without the generous support of our spo
 
 #### How to donate:
 
-If you're interested in sponsoring our team, please reach out to: business@robototes.com with your comapny and the amount you wish to donate.
+If you're interested in sponsoring our team, please reach out to: business@robototes.com with your company and the amount you wish to donate.
 
 To ensure your donation goes directly to our team, please follow these steps:
 
@@ -30,4 +30,4 @@ To ensure your donation goes directly to our team, please follow these steps:
 3. Enter the amount you wish to donate, then check out
 4. Accept the sincere thanks from Team 2412!
 
-All donations are tax deductible.
+All donations are tax-deductible.

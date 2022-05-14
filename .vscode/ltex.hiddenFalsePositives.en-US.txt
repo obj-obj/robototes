@@ -1,0 +1,4 @@
+{"rule":"SENTENCE_WHITESPACE","sentence":"^\\QAiFB59jojVKCiqVIjDDk14T-20a9Bw\\E$"}
+{"rule":"SENTENCE_WHITESPACE","sentence":"^\\QAiFB59jojVKCiqRmW4HORmqieG6Rbw\\E$"}
+{"rule":"SENTENCE_WHITESPACE","sentence":"^\\QAiFB59jojVKChqh0O2OySPy-3hisRA\\E$"}
+{"rule":"SENTENCE_WHITESPACE","sentence":"^\\QAiFB59jojVKChs5WQcxTYiEEy3T4ZQ\\E$"}

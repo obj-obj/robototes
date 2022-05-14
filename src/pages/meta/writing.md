@@ -32,7 +32,7 @@ All pages on this site are written using Markdown.
 
 A good guide/reference is at https://www.markdownguide.org. The [Basic Syntax](https://www.markdownguide.org/basic-syntax/) and [Extended Syntax](https://www.markdownguide.org/extended-syntax/) pages are the most useful.
 
-**Note**: The reference pages say to not use some things because of compatibility, but the version of Markdown used by this site supports all the formats listed on the refernece pages, so don't worry about compaitbility.
+**Note**: The reference pages say to not use some things because of compatibility, but the version of Markdown used by this site supports all the formats listed on the reference pages, so don't worry about compatibility.
 
 Everything on the Extended Syntax page is also supported except:
 
