@@ -75,7 +75,7 @@ footer {
 	h4,
 	h5,
 	h6 {
-		@apply px-1 font-medium;
+		@apply font-medium;
 		margin-block: 0.67em;
 	}
 
@@ -111,6 +111,18 @@ footer {
 .content {
 	* {
 		@apply rounded;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p,
+	ul,
+	ol {
+		@apply px-1;
 	}
 
 	/* REAPPLY SOME BROWSER DEFAULT STYLES */
