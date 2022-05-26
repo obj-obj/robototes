@@ -2,8 +2,8 @@
 import * as site from "../site";
 import "../styles/style.scss";
 
-const {content = {}} = Astro.props;
-const {description} = content;
+const { content = {} } = Astro.props;
+const { description } = content;
 const title = content.title ? (content.title + " | " + site.title) : (site.title);
 ---
 
@@ -15,11 +15,16 @@ const title = content.title ? (content.title + " | " + site.title) : (site.title
 	<title>{title}</title>
 
 	<meta property="og:title" content={title}>
-	{description && <meta property="og:description" content={description}>}
+	{description &&
+	<meta property="og:description" content={description}>}
 	<meta property="og:site_name" content="Robototes">
 	<meta property="og:type" content="website">
 	<link rel="canonical" content={Astro.canonicalURL}>
 	<meta property="og:url" content={Astro.request.url}>
 	<meta property="og:image" content="/assets/robototes.png">
 	<meta property="og:locale" content="en_US">
+
+	<!-- Cloudflare Web Analytics -->
+	<script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+		data-cf-beacon='{"token": "4335e028a1dc4f299a224dc83cc96f03"}'></script>
 </head>
