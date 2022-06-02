@@ -152,7 +152,7 @@ hr {
 
 // Item in navbar
 .navitem {
-	@apply w-full md:w-max h-full hover:bg-black/25 p-1 px-2 flex items-center;
+	@apply w-full lg:w-max h-full hover:bg-black/25 p-1 px-2 flex items-center;
 }
 
 // Container that holds navbar dropdown and link
@@ -162,23 +162,23 @@ hr {
 
 // Navbar dropdown
 .nav-dropdown-content {
-	@apply md:absolute md:z-10 md:opacity-0 md:pointer-events-none md:translate-y-5 ml-2 md:ml-0 md:p-1 md:bg-secondary md:rounded-md duration-[0.25s] md:border border-slate-500;
+	@apply lg:absolute lg:z-10 lg:opacity-0 lg:pointer-events-none lg:translate-y-5 ml-2 lg:ml-0 lg:p-1 lg:bg-secondary lg:rounded-md duration-[0.25s] lg:border border-slate-500;
 }
 
 // Items in navbar dropdown take full width
 .nav-dropdown-content .navitem {
-	@apply md:w-full;
+	@apply lg:w-full;
 }
 
 // Navbar dropdown appears when hovered over
 .nav-dropdown:hover .nav-dropdown-content {
-	@apply md:opacity-100 md:pointer-events-auto md:translate-y-0;
+	@apply lg:opacity-100 lg:pointer-events-auto lg:translate-y-0;
 }
 
 /* SIDEBAR */
 
 .sidebar {
-	@apply md:w-1/6 h-min max-h-[calc(100vh-2rem)] ml-5 md:ml-10 mr-5 mt-10 top-4 overflow-scroll md:sticky bg-secondary rounded border border-slate-500 flex flex-col text-lg;
+	@apply lg:w-1/6 h-min max-h-[calc(100vh-2rem)] ml-5 lg:ml-10 mr-5 mt-10 top-4 overflow-scroll lg:sticky bg-secondary rounded border border-slate-500 flex flex-col text-lg;
 }
 
 .sidebar-item {
@@ -192,5 +192,5 @@ hr {
 /* FOOTER */
 
 .footer-column {
-	@apply flex flex-col items-center md:items-start;
+	@apply flex flex-col items-center lg:items-start;
 }

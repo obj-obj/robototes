@@ -3,16 +3,16 @@ import Navdrop from "./navdrop.astro";
 import Navitem from "./navitem.astro";
 ---
 
-<nav class="w-full md:h-12 bg-black/25 px-2 flex flex-col md:flex-row md:items-stretch text-lg">
+<nav class="w-full lg:h-12 bg-black/25 px-2 flex flex-col lg:flex-row lg:items-stretch text-lg">
 	<a class="p-1 flex items-center" href="/">
-		<img src="/assets/robototes.png" class="h-8 md:h-full mr-1">
+		<img src="/assets/robototes.png" class="h-8 lg:h-full mr-1">
 		Robototes
 	</a>
 
-	<label for="navtoggle" class="cursor-pointer p-1 md:hidden">Toggle Navbar</label>
+	<label for="navtoggle" class="cursor-pointer p-1 lg:hidden">Toggle Navbar</label>
 	<input id="navtoggle" type="checkbox" class="hidden" />
 
-	<div id="navlinks" class="hidden md:flex flex-col md:flex-row items-baseline md:items-center">
+	<div id="navlinks" class="hidden lg:flex flex-col lg:flex-row items-baseline lg:items-center">
 		<Navitem href="/">Home</Navitem>
 		<Navdrop href="/about/" pages={await Astro.glob("../pages/about/!(index.md)")}>About</Navdrop>
 		<Navdrop href="/outreach/" pages={await Astro.glob("../pages/outreach/!(index.md)")}>Outreach</Navdrop>
