@@ -19,7 +19,7 @@ Lead mentor: klinee@bsd405.org
 
 ---
 
-## We're here to help
+# We're here to help
 
 Enter any questions you have below along with your name and email address.
 

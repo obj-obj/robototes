@@ -11,15 +11,15 @@ Our team's success would not be possible without the generous support of our spo
 
 **As well as our past sponsors**: Andeavor, Alaska Airlines, Boeing, Embry-Riddle Aeronautical University, Google
 
-#### Want to become a sponsor of the Robototes?
+# Want to become a sponsor of the Robototes?
 
-###### Sponsorship tiers:
+## Sponsorship tiers:
 
 - A donation of **$250-500** will get your logo and name featured on our **team website**. We also offer the opportunity for you to come in and take a tour of our lab to see our team's collaborative work environment.
 - Donating **$500-900** will get your logo and name on our **T-shirts** for the next year competition season and on our **website**.
 - If your company donates **$900-1000**, you will get your logo on **our shirts, our website, our robot, and on any other promotional items** such as a team tent used at all of our events.
 
-#### How to donate:
+## How to donate:
 
 If you're interested in sponsoring our team, please reach out to: business@robototes.com with your company and the amount you wish to donate.
 
