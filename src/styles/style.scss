@@ -16,7 +16,7 @@ footer {
 	font-size: 18px;
 
 	// Items become highlighted when they are targeted (for example, when a link in the table of contents is clicked)
-	:target {
+	*:target {
 		@apply bg-rose-900;
 	}
 
