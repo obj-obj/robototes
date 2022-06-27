@@ -5,14 +5,16 @@ import Nav from "../components/nav.astro";
 ---
 
 <html lang="en-us" class="w-full h-full scroll-smooth">
-	<Head content={Astro.props.content} />
 
-	<body class="w-full min-h-screen bg-primary flex flex-col items-center
+<Head content={Astro.props.content} />
+
+<body class="w-full min-h-screen bg-primary flex flex-col items-center
 	text-slate-100 selection:bg-rose-900">
-		<Nav content={Astro.props.content} />
-		<slot />
-		<Footer />
+	<Nav content={Astro.props.content} />
+	<slot />
+	<Footer />
 
-		<script src="../script.js"></script>
-	</body>
+	<script src="../script.ts"></script>
+</body>
+
 </html>

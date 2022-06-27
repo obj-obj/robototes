@@ -1,9 +1,13 @@
 ---
-const {href, link = true} = Astro.props;
+const { href, link = true } = Astro.props;
 ---
 
-{link ? 
-	<a class="navitem" {href}><slot /></a>
-	:
-	<p class="navitem"><slot /></p>
+{link ?
+<a class="navitem" {href}>
+	<slot />
+</a>
+:
+<p class="navitem">
+	<slot />
+</p>
 }
