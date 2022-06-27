@@ -4,6 +4,7 @@ specifiers:
   '@astrojs/sitemap': ^0.2.2
   '@astrojs/tailwind': ^0.2.1
   '@swup/preload-plugin': ^1.0.3
+  '@swup/progress-plugin': ^1.1.2
   '@swup/scroll-plugin': ^1.1.0
   astro: 1.0.0-beta.57
   minhtml: ^1.1.0
@@ -14,6 +15,7 @@ devDependencies:
   '@astrojs/sitemap': 0.2.2
   '@astrojs/tailwind': 0.2.1
   '@swup/preload-plugin': 1.0.3
+  '@swup/progress-plugin': 1.1.2
   '@swup/scroll-plugin': 1.1.0
   astro: 1.0.0-beta.57_sass@1.53.0
   minhtml: 1.1.0
@@ -491,6 +493,12 @@ packages:
       '@swup/plugin': 1.0.1
       delegate: 3.2.0
       swup: 2.0.15
+    dev: true
+
+  /@swup/progress-plugin/1.1.2:
+    resolution: {integrity: sha512-1xMTRcdVHQnVha+vYsUalgZJaLxcV21Jx0LaLzGAbuymjU4qAwYISRGOJk3ZvFPa+SbtwEx/hXYhfk6fo/L8Og==}
+    dependencies:
+      '@swup/plugin': 1.0.1
     dev: true
 
   /@swup/scroll-plugin/1.1.0:

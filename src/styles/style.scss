@@ -194,3 +194,9 @@ hr {
 .footer-column {
 	@apply flex flex-col items-center lg:items-start;
 }
+
+/* SWUP */
+
+.swup-progress-bar {
+	@apply bg-rose-900;
+}
