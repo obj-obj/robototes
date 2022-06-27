@@ -3,16 +3,22 @@ lockfileVersion: 5.4
 specifiers:
   '@astrojs/sitemap': ^0.2.2
   '@astrojs/tailwind': ^0.2.1
+  '@swup/preload-plugin': ^1.0.3
+  '@swup/scroll-plugin': ^1.1.0
   astro: 1.0.0-beta.57
   minhtml: ^1.1.0
   sass: ^1.53.0
+  swup: ^2.0.15
 
 devDependencies:
   '@astrojs/sitemap': 0.2.2
   '@astrojs/tailwind': 0.2.1
+  '@swup/preload-plugin': 1.0.3
+  '@swup/scroll-plugin': 1.1.0
   astro: 1.0.0-beta.57_sass@1.53.0
   minhtml: 1.1.0
   sass: 1.53.0
+  swup: 2.0.15
 
 packages:
 
@@ -473,6 +479,25 @@ packages:
     dependencies:
       '@proload/core': 0.3.2
       tsm: 2.2.1
+    dev: true
+
+  /@swup/plugin/1.0.1:
+    resolution: {integrity: sha512-QrTGn1DLx+50CNsk6oGzUFnyNyLkDK6iLb032qKImmAXS+0Dd1cwa8cSGvJ+I27J4qR8y6oJNurgHIEc6ZCTrg==}
+    dev: true
+
+  /@swup/preload-plugin/1.0.3:
+    resolution: {integrity: sha512-Au2v5kwwrY2WFYEmRoHa8FXMq7S/7KgO+iG2n5IOS7CZfVilIpqTIEQQ8y7TZsQuL6+Pk/57aycYywVLZ8tc3w==}
+    dependencies:
+      '@swup/plugin': 1.0.1
+      delegate: 3.2.0
+      swup: 2.0.15
+    dev: true
+
+  /@swup/scroll-plugin/1.1.0:
+    resolution: {integrity: sha512-JnSxXzELHTcGr9OE1t/iwMVsr8rcLU9HG7WHdua2ayWF5r/nYr883r0GrJH0ZC6qfvPDwLfSPQhfH6uVS3VhqA==}
+    dependencies:
+      '@swup/plugin': 1.0.1
+      scrl: 1.0.0
     dev: true
 
   /@types/acorn/4.0.6:
@@ -1053,6 +1078,16 @@ packages:
 
   /defined/1.0.0:
     resolution: {integrity: sha512-Y2caI5+ZwS5c3RiNDJ6u53VhQHv+hHKwhkI1iHvceKUHw9Df6EK2zRLfjejRgMuCuxK7PfSWIMwWecceVvThjQ==}
+    dev: true
+
+  /delegate-it/3.0.1:
+    resolution: {integrity: sha512-XU8H4pjDGBW74hFIbjdLPnvtU3HF3P9bbZvoFBSBLb5JgNaTkRb/2lvC1V+9kmZsxVR0kad4bU3rYhQ/4Ij+Gw==}
+    dependencies:
+      typed-query-selector: 2.6.1
+    dev: true
+
+  /delegate/3.2.0:
+    resolution: {integrity: sha512-IofjkYBZaZivn0V8nnsMJGBr4jVLxHDheKSW88PyxS5QC4Vo9ZbZVvhzlSxY87fVq3STR6r+4cGepyHkcWOQSw==}
     dev: true
 
   /dequal/2.0.2:
@@ -2751,6 +2786,11 @@ packages:
       mimic-fn: 4.0.0
     dev: true
 
+  /opencollective-postinstall/2.0.3:
+    resolution: {integrity: sha512-8AV/sCtuzUeTo8gQK5qDZzARrulB3egtLzFgteqB2tcT4Mw7B8Kt7JcDHmltjz6FOAHsvTevk70gZEbhM4ZS9Q==}
+    hasBin: true
+    dev: true
+
   /ora/6.1.1:
     resolution: {integrity: sha512-MTvBeGEswwM6CjyuidTH4nKdmG8YudnsZZRMdpj4YFfm7qDnvOSTKU2biA3dqdnL5m5CT3R9bWk+M3A8fqtEZw==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
@@ -3241,6 +3281,10 @@ packages:
     resolution: {integrity: sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==}
     dev: true
 
+  /scrl/1.0.0:
+    resolution: {integrity: sha512-nTS2W6UyxYfvOOjeXGXM1j140bm2ZUIjt0mEyGUHecFz2zU1CMYJ71dWPdlnSJR2mYOojY1R5qpo4Fi83O7tog==}
+    dev: true
+
   /section-matter/1.0.0:
     resolution: {integrity: sha512-vfD3pmTzGpufjScBh50YHKzEu2lxBWhVEHsNGoEXmCmn2hKGfeNLYMzCJpe8cD7gqX7TJluOVpBkAequ6dgMmA==}
     engines: {node: '>=4'}
@@ -3496,6 +3540,14 @@ packages:
       typescript: 4.6.4
     dev: true
 
+  /swup/2.0.15:
+    resolution: {integrity: sha512-uth/fVnoec8KRIgvQKinXakIAYQo9TTe0fj4hmpq8Ce3ap/uQKi7crCvnQOGPH4JdcOzUS7Tr9PDGztqhvWHiQ==}
+    requiresBuild: true
+    dependencies:
+      delegate-it: 3.0.1
+      opencollective-postinstall: 2.0.3
+    dev: true
+
   /tailwindcss/3.1.4:
     resolution: {integrity: sha512-NrxbFV4tYsga/hpWbRyUfIaBrNMXDxx5BsHgBS4v5tlyjf+sDsgBg5m9OxjrXIqAS/uR9kicxLKP+bEHI7BSeQ==}
     engines: {node: '>=12.13.0'}
@@ -3590,6 +3642,10 @@ packages:
   /type-fest/2.14.0:
     resolution: {integrity: sha512-hQnTQkFjL5ik6HF2fTAM8ycbr94UbQXK364wF930VHb0dfBJ5JBP8qwrR8TaK9zwUEk7meruo2JAUDMwvuxd/w==}
     engines: {node: '>=12.20'}
+    dev: true
+
+  /typed-query-selector/2.6.1:
+    resolution: {integrity: sha512-nzzcDrI0nncM5XTNyqeG7MrcXTx8lelUtNlTP+NvpnOfRzApyr+ZW4H/FoOaPfzmjn++Tf0ZxXpBN7Q3FN3ERw==}
     dev: true
 
   /typescript/4.6.4:

@@ -8,7 +8,7 @@ sidebar = sidebar && ((headers.length > 0) || pages);
 ---
 
 <Base content={Astro.props.content}>
-<div class="w-full flex flex-col lg:flex-row justify-center">
+<div id="swup" class="w-full flex flex-col lg:flex-row justify-center">
 	{sidebar && <div class="sidebar">
 		{pages && <p class="px-2 pt-2 text-sm">Pages</p>
 		<hr>
