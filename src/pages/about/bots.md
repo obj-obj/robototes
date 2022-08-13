@@ -1,6 +1,6 @@
 ---
 title: Robototes Bots
-layout: /src/layouts/about_page.astro
+layout: /src/layouts/Page.astro
 ---
 
 TODO

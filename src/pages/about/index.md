@@ -1,6 +1,6 @@
 ---
 title: About Us
-layout: /src/layouts/about_page.astro
+layout: /src/layouts/Page.astro
 ---
 
 # Credit:

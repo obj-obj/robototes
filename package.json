@@ -1,23 +1,23 @@
 {
-	"name": "@example/basics",
-	"version": "0.0.1",
+	"name": "robototes",
 	"private": true,
-	"packageManager": "pnpm@7.0.0",
 	"scripts": {
 		"dev": "astro dev",
 		"start": "astro dev",
-		"build": "astro build && minhtml --collapse-boolean-attributes --collapse-whitespace --decode-entities --remove-comments --remove-empty-attributes --remove-empty-elements --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-style-link-type-attributes --use-short-doctype --minify-css --minify-js --file-ext html --input-dir dist --output-dir dist",
+		"build": "astro build && minhtml --collapse-boolean-attributes --collapse-whitespace --decode-entities --remove-comments --remove-empty-attributes --remove-empty-elements --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-style-link-type-attributes --use-short-doctype --minify-css --file-ext html --input-dir dist --output-dir dist",
 		"preview": "astro preview"
 	},
 	"devDependencies": {
-		"@astrojs/sitemap": "^0.2.2",
-		"@astrojs/tailwind": "^0.2.1",
-		"@swup/preload-plugin": "^1.0.3",
-		"@swup/progress-plugin": "^1.1.2",
-		"@swup/scroll-plugin": "^1.1.0",
-		"astro": "1.0.0-beta.57",
-		"minhtml": "^1.1.0",
-		"sass": "^1.53.0",
-		"swup": "^2.0.15"
+		"@astrojs/mdx": "^0.9.0",
+		"@astrojs/sitemap": "^1.0.0",
+		"@astrojs/tailwind": "^1.0.0",
+		"@swup/a11y-plugin": "^2.0.0",
+		"@swup/preload-plugin": "^1.0.4",
+		"@swup/progress-plugin": "^1.2.0",
+		"@swup/scroll-plugin": "^1.2.0",
+		"astro": "1.0.5",
+		"minhtml": "^1.1.1",
+		"sass": "^1.54.4",
+		"swup": "^2.0.18"
 	}
 }

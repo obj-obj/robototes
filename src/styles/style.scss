@@ -15,11 +15,6 @@
 footer {
 	font-size: 18px;
 
-	// Items become highlighted when they are targeted (for example, when a link in the table of contents is clicked)
-	*:target {
-		@apply bg-rose-900;
-	}
-
 	// Tables
 	table {
 		@apply w-full bg-black/25;
@@ -51,7 +46,7 @@ footer {
 	}
 
 	img {
-		@apply w-auto max-h-20 object-scale-down m-2.5;
+		@apply max-w-full h-full object-contain;
 	}
 
 	// Inline code
@@ -113,20 +108,8 @@ footer {
 		@apply rounded;
 	}
 
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6,
-	p,
-	ul,
-	ol {
-		@apply px-1;
-	}
-
 	/* REAPPLY SOME BROWSER DEFAULT STYLES */
-	// Tailwind removes most of the browser's CSS, and this is mostly useful, but some styles need to be reapplied
+	// Tailwind removes most of the browser's default CSS
 	p,
 	dl,
 	multicol {
@@ -147,7 +130,7 @@ hr {
 
 // Navbar toggle button toggles navbar on mobile. Toggle navbar button is really a checkbox in disguise
 #navtoggle:checked + #navlinks {
-	@apply block;
+	@apply flex;
 }
 
 // Item in navbar
@@ -157,7 +140,7 @@ hr {
 
 // Container that holds navbar dropdown and link
 .nav-dropdown {
-	@apply h-full;
+	@apply w-full lg:w-max h-full;
 }
 
 // Navbar dropdown
@@ -176,17 +159,8 @@ hr {
 }
 
 /* SIDEBAR */
-
-.sidebar {
-	@apply lg:w-1/6 h-min max-h-[calc(100vh-2rem)] ml-5 lg:ml-10 mr-5 mt-10 top-4 overflow-scroll lg:sticky bg-secondary rounded border border-slate-500 flex flex-col text-lg;
-}
-
 .sidebar-item {
 	@apply w-full h-max p-2 hover:bg-black/25 active:bg-black/25 rounded;
-}
-
-.sidebar-item-active {
-	@apply bg-black/25;
 }
 
 /* FOOTER */
@@ -196,7 +170,6 @@ hr {
 }
 
 /* SWUP */
-
 .swup-progress-bar {
 	@apply bg-rose-900;
 }

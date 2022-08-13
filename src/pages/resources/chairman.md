@@ -1,6 +1,6 @@
 ---
 title: Chairman
-layout: /src/layouts/resources_page.astro
+layout: /src/layouts/Page.astro
 ---
 
 TODO

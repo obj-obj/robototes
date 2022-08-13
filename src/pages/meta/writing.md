@@ -1,6 +1,6 @@
 ---
 title: Writing
-layout: /src/layouts/meta_page.astro
+layout: /src/layouts/Page.astro
 ---
 
 Info on how to write new content or edit existing content on the site (for non-programmers).
@@ -16,7 +16,7 @@ Every page needs to have a front matter block at the top of the file -- a block 
 ```md
 ---
 title: Writing
-layout: /src/layouts/meta_page.astro
+layout: /src/layouts/Page.astro
 ---
 ```
 
@@ -30,7 +30,7 @@ There are also some other keys that can be in front matter:
 
 All pages on this site are written using Markdown.
 
-A good guide/reference is at https://www.markdownguide.org. The [Basic Syntax](https://www.markdownguide.org/basic-syntax/) and [Extended Syntax](https://www.markdownguide.org/extended-syntax/) pages are the most useful.
+A good guide/reference is at https://www.markdownguide.org. The [Basic Syntax](https://www.markdownguide.org/basic-syntax) and [Extended Syntax](https://www.markdownguide.org/extended-syntax) pages are the most useful.
 
 **Note**: The reference pages say to not use some things because of compatibility, but the version of Markdown used by this site supports all the formats listed on the reference pages, so don't worry about compatibility.
 
@@ -49,4 +49,4 @@ For underlines and super/sub-scripts, you'll have to use the HTML syntax for the
 
 # Tailwind
 
-This website uses [Tailwind CSS](https://tailwindcss.com/). You can read [their documentation](https://tailwindcss.com/docs/) if you want, but it's programmer-oriented.
+This website uses [Tailwind CSS](https://tailwindcss.com). You can read [their documentation](https://tailwindcss.com/docs) if you want, but it's programmer-oriented.

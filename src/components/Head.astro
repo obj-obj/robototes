@@ -17,9 +17,9 @@ const title = content.title ? (content.title + " | " + site.title) : (site.title
 	<meta property="og:title" content={title}>
 	{description &&
 	<meta property="og:description" content={description}>}
-	<meta property="og:site_name" content="Robototes">
+	<meta property="og:site_name" content={site.title}>
 	<meta property="og:type" content="website">
-	<link rel="canonical" content={Astro.canonicalURL}>
+	<link rel="canonical" content={Astro.url.pathname}>
 	<meta property="og:url" content={Astro.request.url}>
 	<meta property="og:image" content="/assets/robototes.png">
 	<meta property="og:locale" content="en_US">
