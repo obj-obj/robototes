@@ -4,20 +4,17 @@
 	"scripts": {
 		"dev": "astro dev",
 		"start": "astro dev",
-		"build": "astro build && minhtml --collapse-boolean-attributes --collapse-whitespace --decode-entities --remove-comments --remove-empty-attributes --remove-empty-elements --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-style-link-type-attributes --use-short-doctype --minify-css --file-ext html --input-dir dist --output-dir dist",
+		"build": "astro build",
 		"preview": "astro preview"
 	},
 	"devDependencies": {
-		"@astrojs/mdx": "^0.9.0",
+		"@astrojs/mdx": "^0.11.1",
 		"@astrojs/sitemap": "^1.0.0",
 		"@astrojs/tailwind": "^1.0.0",
-		"@swup/a11y-plugin": "^2.0.0",
-		"@swup/preload-plugin": "^1.0.4",
-		"@swup/progress-plugin": "^1.2.0",
-		"@swup/scroll-plugin": "^1.2.0",
-		"astro": "1.0.5",
-		"minhtml": "^1.1.1",
-		"sass": "^1.54.4",
-		"swup": "^2.0.18"
+		"astro": "1.2.1",
+		"astro-flamethrower": "^0.1.1",
+		"astro-html-minifier": "^0.2.0",
+		"rollup": "^2.79.0",
+		"sass": "^1.54.9"
 	}
 }

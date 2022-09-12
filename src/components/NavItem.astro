@@ -1,13 +1,20 @@
 ---
-const { href, link = true } = Astro.props;
+export interface Props {
+	href?: URL | string;
+	link?: boolean;
+}
+
+const { href, link = true } = Astro.props as Props;
 ---
 
-{link ?
-<a class="navitem" {href}>
-	<slot />
-</a>
-:
-<p class="navitem">
-	<slot />
-</p>
+{
+	link ? (
+		<a class="navlink" {href}>
+			<slot />
+		</a>
+	) : (
+		<p class="navlink">
+			<slot />
+		</p>
+	)
 }

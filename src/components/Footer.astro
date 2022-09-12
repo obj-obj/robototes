@@ -1,20 +1,26 @@
-<footer class="w-full mt-10 p-10 bg-black/25 flex-auto flex flex-col lg:flex-row">
-	<img class="h-20" src="/assets/2412.png">
+---
+import FooterColumn from "./FooterColumn.astro";
+---
+
+<footer
+	class="w-full mt-10 p-10 bg-black/25 flex-auto flex flex-col lg:flex-row"
+>
+	<img class="h-20" src="/assets/2412.png" />
 	<div class="w-full lg:ml-5 flex flex-col lg:flex-row lg:space-x-5">
-		<div class="footer-column">
+		<FooterColumn>
 			<p>Social</p>
-			<hr>
+			<hr />
 			<a href="https://www.facebook.com/Robototes">Facebook</a>
 			<a href="https://twitter.com/Robototes">Twitter</a>
 			<a href="https://www.instagram.com/Robototes">Instagram</a>
 			<a href="https://www.youtube.com/c/Robototes">YouTube</a>
 			<a href="https://github.com/Robototes">GitHub</a>
-		</div>
+		</FooterColumn>
 
-		<div class="footer-column">
+		<FooterColumn>
 			<p>Easter Egg</p>
-			<hr>
+			<hr />
 			<a href="javascript:rgb()">RGB</a>
-		</div>
+		</FooterColumn>
 	</div>
 </footer>

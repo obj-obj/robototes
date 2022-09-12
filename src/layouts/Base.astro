@@ -1,20 +1,21 @@
 ---
+import { Flamethrower } from "astro-flamethrower";
 import Footer from "@components/Footer.astro";
 import Head from "@components/Head.astro";
 import Nav from "@components/Nav.astro";
 ---
 
 <html lang="en-us" class="w-full h-full scroll-smooth">
+	<Head content={Astro.props.content} />
 
-<Head content={Astro.props.content} />
+	<body
+		class="w-full min-h-screen bg-primary flex flex-col items-center text-slate-100 selection:bg-rose-900"
+	>
+		<Nav content={Astro.props.content} />
+		<slot />
+		<Footer />
 
-<body class="w-full min-h-screen bg-primary flex flex-col items-center
-	text-slate-100 selection:bg-rose-900">
-	<Nav content={Astro.props.content} />
-	<slot />
-	<Footer />
-
-	<script src="../script.ts"></script>
-</body>
-
+		<script src="../script.ts"></script>
+		<Flamethrower color="#881337" width="5px" />
+	</body>
 </html>

@@ -4,27 +4,22 @@ import "../styles/style.scss";
 
 const { content = {} } = Astro.props;
 const { description } = content;
-const title = content.title ? (content.title + " | " + site.title) : (site.title);
+const title = content.title ? content.title + " | " + site.title : site.title;
 ---
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width">
-	<link rel="icon" href="/assets/robototes.png">
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width" />
+	<link rel="icon" href="/assets/robototes.png" />
 
 	<title>{title}</title>
 
-	<meta property="og:title" content={title}>
-	{description &&
-	<meta property="og:description" content={description}>}
-	<meta property="og:site_name" content={site.title}>
-	<meta property="og:type" content="website">
-	<link rel="canonical" content={Astro.url.pathname}>
-	<meta property="og:url" content={Astro.request.url}>
-	<meta property="og:image" content="/assets/robototes.png">
-	<meta property="og:locale" content="en_US">
-
-	<!-- Cloudflare Web Analytics -->
-	<script defer src='https://static.cloudflareinsights.com/beacon.min.js'
-		data-cf-beacon='{"token": "4335e028a1dc4f299a224dc83cc96f03"}'></script>
+	<meta property="og:title" content={title} />
+	{description && <meta property="og:description" content={description} />}
+	<meta property="og:site_name" content={site.title} />
+	<meta property="og:type" content="website" />
+	<link rel="canonical" href={Astro.url.pathname} />
+	<meta property="og:url" content={Astro.request.url} />
+	<meta property="og:image" content="/assets/robototes.png" />
+	<meta property="og:locale" content="en_US" />
 </head>

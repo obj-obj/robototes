@@ -1,44 +1,44 @@
 ---
 import Base from "./Base.astro";
 
-const { headings } = Astro.props;
-let { sidebar = true } = Astro.props.content;
+const { sidebar = true } = Astro.props.content;
 
 const category = Astro.url.pathname.split("/")[1];
-const pages = (await Astro.glob("/src/**/pages/**/*"))
-	.filter(page => page.url?.startsWith(`/${category}`))
+const pages = (await Astro.glob("/src/pages/**/*"))
+	.filter((page) => page.url?.startsWith(`/${category}`))
 	.sort((a, b) => a.frontmatter.title.localeCompare(b.frontmatter.title));
-
-sidebar = sidebar && ((headings.length > 0) || pages);
 ---
 
 <Base content={Astro.props.content}>
-<div id="swup" class="w-full flex flex-col lg:flex-row justify-center">
-	{sidebar && (
-	<div
-		class="lg:w-1/6 h-min max-h-[calc(100vh-2rem)] ml-5 lg:ml-10 mr-5 mt-10 top-4 overflow-scroll lg:sticky bg-secondary rounded border border-slate-500 flex flex-col text-lg">
+	<div class="w-full flex flex-col lg:flex-row justify-center">
+		{
+			sidebar && (
+				<div class="lg:w-1/6 h-min max-h-[calc(100vh-2rem)] ml-5 lg:ml-10 mr-5 mt-10 top-4 overflow-scroll lg:sticky bg-secondary rounded border border-slate-500 flex flex-col text-lg">
+					<p class="px-2 pt-2 text-sm">Pages</p>
+					<hr />
+					{pages.map((page) => (
+						<a
+							class={`w-full h-max p-2 hover:bg-black/25 active:bg-black/25 rounded${
+								page.url == Astro.url.pathname ? " bg-black/25" : ""
+							}`}
+							href={page.url}
+						>
+							{page.frontmatter.title}
+						</a>
+					))}
+				</div>
+			)
+		}
 
-		<p class="px-2 pt-2 text-sm">Pages</p>
-		<hr>
-		{pages.map(page => (
-		<a class={`sidebar-item${page.url==Astro.url.pathname ? " bg-black/25" : "" }`}
-			href={page.url}>{page.frontmatter.title}</a>
-		))}
-
-		{(headings.length > 0) && (
-		<p class="px-2 pt-2 text-sm">Contents</p>
-		<hr>
-		{headings.map(header => (
-		<a class="sidebar-item" href={`#${header.slug}`}>{header.text}</a>
-		))}
-		)}
-	</div>)}
-
-	<main class="content w-full max-w-screen-xl px-5 lg:pl-5 lg:pr-12 lg:text-justify">
-		<h2 class="text-red-500">This site isn't affiliated with the Robototes. This is an experimental rewrite of the
-			website.</h2>
-		<h1 class="title">{Astro.props.content.title}</h1>
-		<slot />
-	</main>
-</div>
+		<main
+			class="content w-full max-w-screen-xl px-5 lg:pl-5 lg:pr-12 lg:text-justify"
+		>
+			<h2 class="text-red-500">
+				This site isn't affiliated with the Robototes. This is an experimental
+				rewrite of the website.
+			</h2>
+			<h1 class="title">{Astro.props.content.title}</h1>
+			<slot />
+		</main>
+	</div>
 </Base>

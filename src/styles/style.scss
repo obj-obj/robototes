@@ -133,43 +133,22 @@ hr {
 	@apply flex;
 }
 
-// Item in navbar
-.navitem {
-	@apply w-full lg:w-max h-full hover:bg-black/25 p-1 px-2 flex items-center;
-}
-
-// Container that holds navbar dropdown and link
-.nav-dropdown {
+.navdropdown {
 	@apply w-full lg:w-max h-full;
 }
 
-// Navbar dropdown
-.nav-dropdown-content {
+.navdropdownitems {
 	@apply lg:absolute lg:z-10 lg:opacity-0 lg:pointer-events-none lg:translate-y-5 ml-2 lg:ml-0 lg:p-1 lg:bg-secondary lg:rounded-md duration-[0.25s] lg:border border-slate-500;
 }
 
-// Items in navbar dropdown take full width
-.nav-dropdown-content .navitem {
-	@apply lg:w-full;
+.navlink {
+	@apply w-full lg:w-max h-full hover:bg-black/25 p-1 px-2 flex items-center;
 }
 
-// Navbar dropdown appears when hovered over
-.nav-dropdown:hover .nav-dropdown-content {
-	@apply lg:opacity-100 lg:pointer-events-auto lg:translate-y-0;
+.navdropdown:hover .navdropdownitems {
+	@apply opacity-100 pointer-events-auto translate-y-0;
 }
 
-/* SIDEBAR */
-.sidebar-item {
-	@apply w-full h-max p-2 hover:bg-black/25 active:bg-black/25 rounded;
-}
-
-/* FOOTER */
-
-.footer-column {
-	@apply flex flex-col items-center lg:items-start;
-}
-
-/* SWUP */
-.swup-progress-bar {
-	@apply bg-rose-900;
+.navdropdownitems .navlink {
+	@apply w-full;
 }

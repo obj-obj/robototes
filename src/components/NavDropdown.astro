@@ -1,17 +1,26 @@
 ---
 import Navitem from "./NavItem.astro";
 
-const { href, link, pages, right } = Astro.props;
+export interface Props {
+	href?: URL | string;
+	link?: boolean;
+	pages: Record<string, any>[];
+	right?: boolean;
+}
+
+const { href, link, pages, right } = Astro.props as Props;
 ---
 
-<div class="nav-dropdown">
+<div class="navdropdown">
 	<Navitem {href} {link}>
 		<slot />
 	</Navitem>
 
-	<div class={"nav-dropdown-content" + (right ? " right-0" : "" )}>
-		{pages.map(page => (
-		<Navitem href={page.url}>{page.frontmatter.title}</Navitem>
-		))}
+	<div class={"navdropdownitems" + (right ? " right-0" : "")}>
+		{
+			pages.map((page) => (
+				<Navitem href={page.url}>{page.frontmatter.title}</Navitem>
+			))
+		}
 	</div>
 </div>
