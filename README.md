@@ -1,8 +1,10 @@
-# Building & Running:
+# Netlify Status
 
-Build: `pnpm build`
+[![Netlify Status](https://api.netlify.com/api/v1/badges/093f4eb5-2564-4017-b661-69ad703bb696/deploy-status)](https://app.netlify.com/sites/robototes/deploys)
 
-Run: `pnpm start`, then go to http://localhost:3000
+# Building & Writing:
+
+See https://robototes.netlify.app/meta/writing.
 
 # Note:
 
