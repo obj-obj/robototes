@@ -11,12 +11,15 @@ export interface Props {
 const { href, link, pages, right } = Astro.props as Props;
 ---
 
-<div class="navdropdown">
-	<Navitem {href} {link}>
+<div class="group w-full lg:w-max h-full">
+	<Navitem href={href} link={link}>
 		<slot />
 	</Navitem>
 
-	<div class={"navdropdownitems" + (right ? " right-0" : "")}>
+	<div
+		class={"lg:absolute lg:z-10 lg:opacity-0 lg:group-hover:opacity-100 lg:pointer-events-none lg:group-hover:pointer-events-auto lg:translate-y-5 lg:group-hover:translate-y-0 ml-2 lg:ml-0 lg:p-1 lg:bg-secondary lg:rounded-md duration-[0.25s] lg:border border-slate-500 lg:[&_*]:w-full" +
+			(right ? " right-0" : "")}
+	>
 		{
 			pages.map((page) => (
 				<Navitem href={page.url}>{page.frontmatter.title}</Navitem>

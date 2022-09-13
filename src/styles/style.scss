@@ -15,6 +15,10 @@
 footer {
 	font-size: 18px;
 
+	:target {
+		@apply bg-rose-900;
+	}
+
 	// Tables
 	table {
 		@apply w-full bg-black/25;
@@ -46,7 +50,7 @@ footer {
 	}
 
 	img {
-		@apply max-w-full h-full object-contain;
+		@apply w-auto h-max max-h-[10vh] object-contain;
 	}
 
 	// Inline code
@@ -131,24 +135,4 @@ hr {
 // Navbar toggle button toggles navbar on mobile. Toggle navbar button is really a checkbox in disguise
 #navtoggle:checked + #navlinks {
 	@apply flex;
-}
-
-.navdropdown {
-	@apply w-full lg:w-max h-full;
-}
-
-.navdropdownitems {
-	@apply lg:absolute lg:z-10 lg:opacity-0 lg:pointer-events-none lg:translate-y-5 ml-2 lg:ml-0 lg:p-1 lg:bg-secondary lg:rounded-md duration-[0.25s] lg:border border-slate-500;
-}
-
-.navlink {
-	@apply w-full lg:w-max h-full hover:bg-black/25 p-1 px-2 flex items-center;
-}
-
-.navdropdown:hover .navdropdownitems {
-	@apply opacity-100 pointer-events-auto translate-y-0;
-}
-
-.navdropdownitems .navlink {
-	@apply w-full;
 }

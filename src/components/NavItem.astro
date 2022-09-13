@@ -5,15 +5,16 @@ export interface Props {
 }
 
 const { href, link = true } = Astro.props as Props;
+const common = "h-full hover:bg-black/25 p-1 px-2 flex items-center";
 ---
 
 {
 	link ? (
-		<a class="navlink" {href}>
+		<a class={`w-full lg:w-max ${common}`} {href}>
 			<slot />
 		</a>
 	) : (
-		<p class="navlink">
+		<p class={common}>
 			<slot />
 		</p>
 	)

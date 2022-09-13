@@ -1,6 +1,5 @@
 module.exports = {
-	content: ["./src/**/*.{astro,html,js,jsx,md,svelte,ts,tsx,vue}"],
-	safelist: ["pl-2", "pl-3", "pl-4", "pl-5", "pl-6", "pl-7"],
+	content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
 	theme: {
 		extend: {
 			colors: {

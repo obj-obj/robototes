@@ -1,0 +1,43 @@
+---
+import type { MarkdownHeading } from "astro";
+
+export interface Props {
+	headings: MarkdownHeading[];
+	pages: Record<string, any>[];
+}
+const { pages, headings } = Astro.props;
+---
+
+<div
+	class="lg:w-1/6 h-min max-h-[calc(100vh-2rem)] ml-5 lg:ml-10 mr-5 mt-10 top-4 overflow-scroll lg:sticky bg-secondary rounded border border-slate-500 flex flex-col text-lg"
+>
+	<p class="px-2 pt-2 text-sm">Pages</p>
+	<hr />
+	{
+		pages.map((page) => (
+			<a
+				class={`w-full h-max p-2 hover:bg-black/25 active:bg-black/25 rounded${
+					page.url == Astro.url.pathname ? " bg-black/25" : ""
+				}`}
+				href={page.url}
+			>
+				{page.frontmatter.title}
+			</a>
+		))
+	}
+
+	{(headings.length > 0) && (
+		<p class="px-2 pt-2 text-sm">Contents</p>
+		<hr />
+	)}
+	{
+		headings.map((heading) => (
+			<a
+				class={`w-full h-max p-2 hover:bg-black/25 rounded${heading.depth > 1 ? (heading.depth > 2 ? (heading.depth > 3 ? " text-xs" : " text-sm") : " text-base") : ""}`}
+				href={`#${heading.slug}`}
+			>
+				{heading.text}
+			</a>
+		))
+	}
+</div>
