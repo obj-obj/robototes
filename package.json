@@ -12,7 +12,6 @@
 		"@astrojs/sitemap": "^1.0.0",
 		"@astrojs/tailwind": "^1.0.0",
 		"astro": "1.2.1",
-		"astro-flamethrower": "^0.1.1",
 		"astro-html-minifier": "^0.2.0",
 		"rollup": "^2.79.0",
 		"sass": "^1.54.9"

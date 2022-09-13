@@ -5,7 +5,6 @@ specifiers:
   '@astrojs/sitemap': ^1.0.0
   '@astrojs/tailwind': ^1.0.0
   astro: 1.2.1
-  astro-flamethrower: ^0.1.1
   astro-html-minifier: ^0.2.0
   rollup: ^2.79.0
   sass: ^1.54.9
@@ -15,7 +14,6 @@ devDependencies:
   '@astrojs/sitemap': 1.0.0
   '@astrojs/tailwind': 1.0.0
   astro: 1.2.1_sass@1.54.9
-  astro-flamethrower: 0.1.1
   astro-html-minifier: 0.2.0
   rollup: 2.79.0
   sass: 1.54.9
@@ -807,12 +805,6 @@ packages:
     hasBin: true
     dev: true
 
-  /astro-flamethrower/0.1.1:
-    resolution: {integrity: sha512-Skwo0ltdStCRBTCzKN0ihlfkm80w3aaHDa1QLAYTsjmxxKmc5GYPTEMy/blCuYDqP8ks53loXhINjyZ2ZClmMA==}
-    dependencies:
-      flamethrower-router: 0.0.0-meme.12
-    dev: true
-
   /astro-html-minifier/0.2.0:
     resolution: {integrity: sha512-qxIffs5h/zBqiVydk5mp3un+4JAxkXDegdhQc8gljGGm+WSohMmlvzSlNejMsqm0AtYo3GMJBD0tWP9Qy7k7lA==}
     dependencies:
@@ -1589,10 +1581,6 @@ packages:
     dependencies:
       micromatch: 4.0.5
       pkg-dir: 4.2.0
-    dev: true
-
-  /flamethrower-router/0.0.0-meme.12:
-    resolution: {integrity: sha512-PWcNrjzItwk61RTk/SbbKJNcAgl6qCXH8xkZjGjUGV/dgKAnURci+k+Yk8emubUQWTdAd1kSqujy0VRjoeEgxg==}
     dev: true
 
   /format/0.2.2:
