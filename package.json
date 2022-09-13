@@ -5,7 +5,9 @@
 		"dev": "astro dev",
 		"start": "astro dev",
 		"build": "astro build",
-		"preview": "astro preview"
+		"preview": "astro preview",
+		"format": "prettier -w --plugin-search-dir=. .",
+		"format-check": "prettier -c --plugin-search-dir=. ."
 	},
 	"devDependencies": {
 		"@astrojs/mdx": "^0.11.1",
@@ -13,6 +15,8 @@
 		"@astrojs/tailwind": "^1.0.0",
 		"astro": "1.2.2",
 		"astro-html-minifier": "^0.2.0",
+		"prettier": "^2.7.1",
+		"prettier-plugin-astro": "^0.5.4",
 		"rollup": "^2.79.0",
 		"sass": "^1.54.9"
 	}

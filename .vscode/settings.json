@@ -1,5 +1,6 @@
 {
-	"[mdx]": {
-		"editor.defaultFormatter": "vscode.markdown-language-features"
+	"prettier.documentSelectors": ["**/*.astro"],
+	"[astro]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	}
 }

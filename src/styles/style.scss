@@ -30,7 +30,7 @@ footer {
 
 	th,
 	td {
-		@apply p-2 border border-slate-500;
+		@apply border border-slate-500 p-2;
 	}
 
 	// All lists
@@ -50,7 +50,7 @@ footer {
 	}
 
 	img {
-		@apply w-auto h-max max-h-[10vh] object-contain;
+		@apply h-max max-h-[10vh] w-auto object-contain;
 	}
 
 	// Inline code
@@ -65,7 +65,7 @@ footer {
 
 	// Quotes
 	blockquote {
-		@apply pl-2 bg-black/25 border-l-8 border-rose-900 text-lg;
+		@apply border-l-8 border-rose-900 bg-black/25 pl-2 text-lg;
 	}
 
 	h1,
@@ -99,11 +99,11 @@ footer {
 	}
 
 	.title {
-		@apply font-normal text-5xl;
+		@apply text-5xl font-normal;
 	}
 
 	a {
-		@apply text-blue-400 hover:text-blue-200 visited:text-purple-400 visited:hover:text-purple-200;
+		@apply text-blue-400 visited:text-purple-400 hover:text-blue-200 visited:hover:text-purple-200;
 	}
 }
 
@@ -122,7 +122,7 @@ footer {
 }
 
 iframe {
-	@apply w-full h-[75vh];
+	@apply h-[75vh] w-full;
 }
 
 // Make horizontal rules always full width

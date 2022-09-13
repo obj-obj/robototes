@@ -11,7 +11,7 @@ export interface Props {
 const { href, link, pages, right } = Astro.props as Props;
 ---
 
-<div class="group w-full lg:w-max h-full">
+<div class="group h-full w-full lg:w-max">
 	<Navitem href={href} link={link}>
 		<slot />
 	</Navitem>

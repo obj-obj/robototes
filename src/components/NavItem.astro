@@ -10,7 +10,7 @@ const common = "h-full hover:bg-black/25 p-1 px-2 flex items-center";
 
 {
 	link ? (
-		<a class={`w-full lg:w-max ${common}`} {href}>
+		<a class={`w-full lg:w-max ${common}`} href={href}>
 			<slot />
 		</a>
 	) : (

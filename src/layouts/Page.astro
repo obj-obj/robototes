@@ -11,7 +11,7 @@ const pages = (await Astro.glob("/src/pages/**/*"))
 ---
 
 <Base content={Astro.props.content}>
-	<div class="w-full flex flex-col lg:flex-row justify-center">
+	<div class="flex w-full flex-col justify-center lg:flex-row">
 		{sidebar && <Sidebar pages={pages} headings={Astro.props.headings} />}
 
 		<main

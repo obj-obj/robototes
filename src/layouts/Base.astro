@@ -4,11 +4,11 @@ import Head from "@components/Head.astro";
 import Nav from "@components/Nav.astro";
 ---
 
-<html lang="en-us" class="w-full h-full scroll-smooth">
+<html lang="en-us" class="h-full w-full scroll-smooth">
 	<Head content={Astro.props.content} />
 
 	<body
-		class="w-full min-h-screen bg-primary flex flex-col items-center text-slate-100 selection:bg-rose-900"
+		class="flex min-h-screen w-full flex-col items-center bg-primary text-slate-100 selection:bg-rose-900"
 	>
 		<Nav content={Astro.props.content} />
 		<slot />

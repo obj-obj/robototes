@@ -20,7 +20,7 @@ export interface Props {
 const props = Astro.props;
 ---
 
-<div class="bg-white p-4 flex flex-wrap gap-8 justify-evenly">
+<div class="flex flex-wrap justify-evenly gap-8 bg-white p-4">
 	{
 		(props.all || props.analogDevices) && (
 			<img src="/assets/sponsors/analog_devices.avif" />

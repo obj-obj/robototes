@@ -4,6 +4,7 @@ dist/
 
 # dependencies
 node_modules/
+prettier-plugin-tailwindcss/
 
 # logs
 npm-debug.log*

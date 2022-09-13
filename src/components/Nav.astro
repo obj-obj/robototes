@@ -4,16 +4,16 @@ import Navitem from "./NavItem.astro";
 ---
 
 <nav
-	class="w-full lg:h-12 bg-black/25 px-2 flex flex-col lg:flex-row lg:items-stretch text-lg"
+	class="flex w-full flex-col bg-black/25 px-2 text-lg lg:h-12 lg:flex-row lg:items-stretch"
 >
 	<div class="flex items-center">
-		<a class="p-1 flex items-center" href="/">
-			<img src="/assets/robototes.avif" class="h-8 mr-1" />
+		<a class="flex items-center p-1" href="/">
+			<img src="/assets/robototes.avif" class="mr-1 h-8" />
 			Robototes
 		</a>
 
-		<label for="navtoggle" class="cursor-pointer ml-auto p-1 lg:hidden"
-			>Toggle Navbar
+		<label for="navtoggle" class="ml-auto cursor-pointer p-1 lg:hidden">
+			Toggle Navbar
 		</label>
 	</div>
 
@@ -21,7 +21,7 @@ import Navitem from "./NavItem.astro";
 
 	<div
 		id="navlinks"
-		class="hidden lg:h-auto lg:ml-auto overflow-y-hidden lg:flex flex-col lg:flex-row items-baseline lg:items-center"
+		class="hidden flex-col items-baseline overflow-y-hidden lg:ml-auto lg:flex lg:h-auto lg:flex-row lg:items-center"
 	>
 		<Navitem href="/">Home</Navitem>
 		<Navdrop
@@ -32,12 +32,14 @@ import Navitem from "./NavItem.astro";
 		<Navdrop
 			href="/outreach"
 			pages={await Astro.glob("../pages/outreach/!(index.md)")}
-			>Outreach
+		>
+			Outreach
 		</Navdrop>
 		<Navdrop
 			link={false}
 			pages={await Astro.glob("../pages/resources/!(index.md)")}
-			>Resources
+		>
+			Resources
 		</Navdrop>
 		<Navitem href="/calendar">Calendar</Navitem>
 		<Navitem href="/contact">Contact Us</Navitem>
@@ -45,7 +47,8 @@ import Navitem from "./NavItem.astro";
 			link={false}
 			pages={await Astro.glob("../pages/meta/index.md")}
 			right
-			>...
+		>
+			...
 		</Navdrop>
 	</div>
 </nav>
