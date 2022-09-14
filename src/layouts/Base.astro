@@ -4,16 +4,22 @@ import Head from "@components/Head.astro";
 import Nav from "@components/Nav.astro";
 ---
 
-<html lang="en-us" class="h-full w-full scroll-smooth">
-	<Head content={Astro.props.content} />
+<style>
+	html {
+		@apply h-full w-full;
+	}
 
-	<body
-		class="flex min-h-screen w-full flex-col items-center bg-primary text-slate-100 selection:bg-rose-900"
-	>
-		<Nav content={Astro.props.content} />
-		<slot />
-		<Footer />
+	body {
+		@apply flex min-h-screen w-full flex-col items-center bg-primary text-slate-100 selection:bg-rose-900;
+	}
+</style>
 
-		<script src="../script.ts"></script>
-	</body>
-</html>
+<Head content={Astro.props.content} />
+
+<body>
+	<Nav content={Astro.props.content} />
+	<slot />
+	<Footer />
+
+	<script src="../script.ts"></script>
+</body>

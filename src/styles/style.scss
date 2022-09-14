@@ -8,7 +8,20 @@
 @tailwind components;
 @tailwind utilities;
 
+/* UTIL */
+.columns {
+	@apply gap-8 md:flex;
+}
+
+.columns .column {
+	@apply flex-grow;
+}
+
 /* MAIN CONTENT */
+
+* {
+	@apply scroll-smooth duration-100;
+}
 
 // Styles within are applied to everything but the navbar
 .content,
@@ -103,11 +116,11 @@ footer {
 	}
 
 	a {
-		@apply text-blue-400 visited:text-purple-400 hover:text-blue-200 visited:hover:text-purple-200;
+		@apply text-blue-400 hover:text-blue-200;
 	}
 }
 
-.content {
+main {
 	* {
 		@apply rounded;
 	}

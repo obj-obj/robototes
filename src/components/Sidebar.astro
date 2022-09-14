@@ -6,21 +6,32 @@ export interface Props {
 	pages: Record<string, any>[];
 }
 const { pages, headings } = Astro.props;
+
+function isCurrent(url: string) {
+	return url == Astro.url.pathname || url + "/" == Astro.url.pathname;
+}
 ---
 
-<div
-	class="top-4 ml-5 mr-5 mt-10 flex h-min max-h-[calc(100vh-2rem)] flex-col overflow-scroll rounded border border-slate-500 bg-secondary text-lg lg:sticky lg:ml-10 lg:w-1/6"
->
-	<p class="px-2 pt-2 text-sm">Pages</p>
+<style>
+	div {
+		@apply ml-5 mr-5 mt-10 flex h-min max-h-[calc(100vh-2rem)] flex-col overflow-scroll rounded border border-slate-500 bg-secondary text-lg lg:sticky lg:top-16 lg:ml-10 lg:w-1/6;
+	}
+
+	p {
+		@apply px-2 pt-2 text-sm;
+	}
+
+	a {
+		@apply h-max w-full rounded p-2 hover:bg-black/25;
+	}
+</style>
+
+<div>
+	<p>Pages</p>
 	<hr />
 	{
 		pages.map((page) => (
-			<a
-				class={`h-max w-full p-2 hover:bg-black/25 active:bg-black/25 rounded${
-					page.url == Astro.url.pathname ? " bg-black/25" : ""
-				}`}
-				href={page.url}
-			>
+			<a class={`${isCurrent(page.url) ? " bg-black/25" : ""}`} href={page.url}>
 				{page.frontmatter.title}
 			</a>
 		))
@@ -29,7 +40,7 @@ const { pages, headings } = Astro.props;
 	{
 		headings.length > 0 && (
 			<>
-				<p class="px-2 pt-2 text-sm">Contents</p>
+				<p>Contents</p>
 				<hr />
 			</>
 		)
@@ -37,7 +48,7 @@ const { pages, headings } = Astro.props;
 	{
 		headings.map((heading) => (
 			<a
-				class={`h-max w-full p-2 hover:bg-black/25 rounded${
+				class={`${
 					heading.depth > 1
 						? heading.depth > 2
 							? heading.depth > 3

@@ -8,7 +8,13 @@ const all = props.all;
 const active = all || props.active;
 ---
 
-<div class="flex flex-wrap justify-evenly gap-8 bg-white p-4">
+<style>
+	div {
+		@apply flex flex-wrap justify-evenly gap-8 bg-white p-4;
+	}
+</style>
+
+<div>
 	{all && <img src="/assets/sponsors/analog_devices.avif" />}
 	{active && <img src="/assets/sponsors/bellevue_schools_foundation.avif" />}
 	{active && <img src="/assets/sponsors/colburn_law.avif" />}

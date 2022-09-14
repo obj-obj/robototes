@@ -11,16 +11,30 @@ export interface Props {
 const { href, link, pages, right } = Astro.props as Props;
 ---
 
-<div class="group h-full w-full lg:w-max">
+<style>
+	.navdrop {
+		@apply h-full w-full lg:w-max;
+	}
+
+	.navdrop * {
+		@apply lg:w-full;
+	}
+
+	.navdropinner {
+		@apply ml-2 border-slate-500 lg:pointer-events-none lg:absolute lg:z-10 lg:ml-0 lg:-translate-y-5 lg:rounded-md lg:border lg:bg-secondary lg:p-1 lg:opacity-0;
+	}
+
+	.navdrop:hover .nav-drop-inner {
+		@apply lg:pointer-events-auto lg:translate-y-0 lg:opacity-100;
+	}
+</style>
+
+<div class="navdrop">
 	<Navitem href={href} link={link}>
 		<slot />
 	</Navitem>
 
-	<div
-		class={`ml-2 border-slate-500 duration-[0.25s] lg:pointer-events-none lg:absolute lg:z-10 lg:ml-0 lg:translate-y-5 lg:rounded-md lg:border lg:bg-secondary lg:p-1 lg:opacity-0 lg:group-hover:pointer-events-auto lg:group-hover:translate-y-0 lg:group-hover:opacity-100 lg:[&_*]:w-full${
-			right ? " right-0" : ""
-		}`}
-	>
+	<div class={`navdropinner${right ? " right-0" : ""}`}>
 		{
 			pages.map((page) => (
 				<Navitem href={page.url}>{page.frontmatter.title}</Navitem>

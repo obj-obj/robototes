@@ -10,13 +10,21 @@ const pages = (await Astro.glob("/src/pages/**/*"))
 	.sort((a, b) => a.frontmatter.title.localeCompare(b.frontmatter.title));
 ---
 
+<style>
+	div {
+		@apply flex w-full flex-col justify-center lg:flex-row;
+	}
+
+	main {
+		@apply w-full max-w-screen-xl px-5 lg:pl-5 lg:pr-12 lg:text-justify;
+	}
+</style>
+
 <Base content={Astro.props.content}>
-	<div class="flex w-full flex-col justify-center lg:flex-row">
+	<div>
 		{sidebar && <Sidebar pages={pages} headings={Astro.props.headings} />}
 
-		<main
-			class="content w-full max-w-screen-xl px-5 lg:pl-5 lg:pr-12 lg:text-justify"
-		>
+		<main>
 			<h2 class="text-red-500">
 				This site isn't affiliated with the Robototes. This is an experimental
 				rewrite of the website.

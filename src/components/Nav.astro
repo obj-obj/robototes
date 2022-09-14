@@ -3,9 +3,17 @@ import Navdrop from "./NavDropdown.astro";
 import Navitem from "./NavItem.astro";
 ---
 
-<nav
-	class="flex w-full flex-col bg-black/25 px-2 text-lg lg:h-12 lg:flex-row lg:items-stretch"
->
+<style>
+	nav {
+		@apply flex w-full flex-col bg-black/25 px-2 text-lg lg:sticky lg:top-0 lg:h-12 lg:flex-row lg:items-stretch lg:backdrop-blur;
+	}
+
+	#navlinks {
+		@apply hidden flex-col items-baseline overflow-y-hidden lg:ml-auto lg:flex lg:h-auto lg:flex-row lg:items-center;
+	}
+</style>
+
+<nav>
 	<div class="flex items-center">
 		<a class="flex items-center p-1" href="/">
 			<img src="/assets/robototes.avif" class="mr-1 h-8" />
@@ -19,10 +27,7 @@ import Navitem from "./NavItem.astro";
 
 	<input id="navtoggle" type="checkbox" class="hidden" />
 
-	<div
-		id="navlinks"
-		class="hidden flex-col items-baseline overflow-y-hidden lg:ml-auto lg:flex lg:h-auto lg:flex-row lg:items-center"
-	>
+	<div id="navlinks">
 		<Navitem href="/">Home</Navitem>
 		<Navdrop
 			href="/about"
@@ -45,7 +50,7 @@ import Navitem from "./NavItem.astro";
 		<Navitem href="/contact">Contact Us</Navitem>
 		<Navdrop
 			link={false}
-			pages={await Astro.glob("../pages/meta/index.md")}
+			pages={await Astro.glob("../pages/meta/index.mdx")}
 			right
 		>
 			...
