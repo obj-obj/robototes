@@ -1,78 +1,26 @@
 ---
-// TODO better way to do this component
 export interface Props {
 	all?: boolean;
-	analogDevices?: boolean;
-	bellevueSchoolsFoundation?: boolean;
-	colburnLaw?: boolean;
-	firstTech?: boolean;
-	homeDepot?: boolean;
-	intellectualVentures?: boolean;
-	kaliberGlobal?: boolean;
-	kpff?: boolean;
-	mandrio?: boolean;
-	microsoft?: boolean;
-	pandp?: boolean;
-	plugable?: boolean;
-	publicInstruction?: boolean;
-	tMobile?: boolean;
+	active?: boolean;
 }
 const props = Astro.props;
+const all = props.all;
+const active = all || props.active;
 ---
 
 <div class="flex flex-wrap justify-evenly gap-8 bg-white p-4">
-	{
-		(props.all || props.analogDevices) && (
-			<img src="/assets/sponsors/analog_devices.avif" />
-		)
-	}
-	{
-		(props.all || props.bellevueSchoolsFoundation) && (
-			<img src="/assets/sponsors/bellevue_schools_foundation.avif" />
-		)
-	}
-	{
-		(props.all || props.colburnLaw) && (
-			<img src="/assets/sponsors/colburn_law.avif" />
-		)
-	}
-	{
-		(props.all || props.firstTech) && (
-			<img src="/assets/sponsors/first_tech.avif" />
-		)
-	}
-	{
-		(props.all || props.homeDepot) && (
-			<img src="/assets/sponsors/home_depot.avif" />
-		)
-	}
-	{
-		(props.all || props.intellectualVentures) && (
-			<img src="/assets/sponsors/intellectual_ventures.avif" />
-		)
-	}
-	{
-		(props.all || props.kaliberGlobal) && (
-			<img src="/assets/sponsors/kaliber_global.avif" />
-		)
-	}
-	{(props.all || props.kpff) && <img src="/assets/sponsors/kpff.avif" />}
-	{(props.all || props.mandrio) && <img src="/assets/sponsors/mandrio.avif" />}
-	{
-		(props.all || props.microsoft) && (
-			<img src="/assets/sponsors/microsoft.avif" />
-		)
-	}
-	{(props.all || props.pandp) && <img src="/assets/sponsors/p&p.avif" />}
-	{
-		(props.all || props.plugable) && (
-			<img src="/assets/sponsors/plugable.avif" />
-		)
-	}
-	{
-		(props.all || props.publicInstruction) && (
-			<img src="/assets/sponsors/public_instruction.avif" />
-		)
-	}
-	{(props.all || props.tMobile) && <img src="/assets/sponsors/t_mobile.avif" />}
+	{all && <img src="/assets/sponsors/analog_devices.avif" />}
+	{active && <img src="/assets/sponsors/bellevue_schools_foundation.avif" />}
+	{active && <img src="/assets/sponsors/colburn_law.avif" />}
+	{all && <img src="/assets/sponsors/first_tech.avif" />}
+	{all && <img src="/assets/sponsors/home_depot.avif" />}
+	{active && <img src="/assets/sponsors/intellectual_ventures.avif" />}
+	{all && <img src="/assets/sponsors/kaliber_global.avif" />}
+	{all && <img src="/assets/sponsors/kpff.avif" />}
+	{active && <img src="/assets/sponsors/mandrio.avif" />}
+	{active && <img src="/assets/sponsors/microsoft.avif" />}
+	{active && <img src="/assets/sponsors/p&p.avif" />}
+	{all && <img src="/assets/sponsors/plugable.avif" />}
+	{active && <img src="/assets/sponsors/public_instruction.avif" />}
+	{active && <img src="/assets/sponsors/t_mobile.avif" />}
 </div>
