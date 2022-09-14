@@ -14,7 +14,16 @@ const { href, link = true } = Astro.props as Props;
 
 	a,
 	p {
-		@apply flex h-full items-center p-1 px-2 hover:bg-black/25;
+		@apply flex h-full items-center rounded p-1 px-2 hover:bg-rose-900/25;
+	}
+</style>
+
+<style is:global lang="scss">
+	.navdropinner {
+		a,
+		p {
+			width: 100%;
+		}
 	}
 </style>
 

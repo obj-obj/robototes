@@ -5,6 +5,8 @@ module.exports = {
 			colors: {
 				// Background
 				primary: "#300807",
+				// Darker Background
+				dark: "#240605",
 				// Secondary Background
 				secondary: "#44091b",
 			},

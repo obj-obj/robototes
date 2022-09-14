@@ -16,15 +16,11 @@ const { href, link, pages, right } = Astro.props as Props;
 		@apply h-full w-full lg:w-max;
 	}
 
-	.navdrop * {
-		@apply lg:w-full;
-	}
-
 	.navdropinner {
-		@apply ml-2 border-slate-500 lg:pointer-events-none lg:absolute lg:z-10 lg:ml-0 lg:-translate-y-5 lg:rounded-md lg:border lg:bg-secondary lg:p-1 lg:opacity-0;
+		@apply ml-2 border-slate-500 lg:pointer-events-none lg:absolute lg:z-10 lg:ml-0 lg:-translate-y-5 lg:rounded-md lg:border lg:bg-dark lg:p-1 lg:opacity-0;
 	}
 
-	.navdrop:hover .nav-drop-inner {
+	.navdrop:hover .navdropinner {
 		@apply lg:pointer-events-auto lg:translate-y-0 lg:opacity-100;
 	}
 </style>
