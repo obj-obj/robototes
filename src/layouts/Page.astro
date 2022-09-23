@@ -10,13 +10,14 @@ const pages = (await Astro.glob("/src/pages/**/*"))
 	.sort((a, b) => a.frontmatter.title.localeCompare(b.frontmatter.title));
 ---
 
+<style is:global>
+	main {
+		@apply w-full max-w-screen-xl px-5 lg:pl-5 lg:pr-12 lg:text-justify;
+	}
+</style>
 <style>
 	div {
 		@apply flex w-full flex-col justify-center lg:flex-row;
-	}
-
-	main {
-		@apply w-full max-w-screen-xl px-5 lg:pl-5 lg:pr-12 lg:text-justify;
 	}
 </style>
 

@@ -11,7 +11,7 @@ export interface Props {
 const { href, link, pages, right } = Astro.props as Props;
 ---
 
-<style>
+<style is:global>
 	.navdrop {
 		@apply h-full w-full lg:w-max;
 	}

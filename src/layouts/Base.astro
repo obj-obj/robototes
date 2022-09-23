@@ -4,7 +4,7 @@ import Head from "@components/Head.astro";
 import Nav from "@components/Nav.astro";
 ---
 
-<style>
+<style is:global>
 	body {
 		@apply flex min-h-screen w-full flex-col items-center bg-primary text-slate-100 selection:bg-rose-900;
 	}
@@ -16,6 +16,4 @@ import Nav from "@components/Nav.astro";
 	<Nav content={Astro.props.content} />
 	<slot />
 	<Footer />
-
-	<script src="../script.ts"></script>
 </body>

@@ -2,11 +2,20 @@
 import FooterColumn from "./FooterColumn.astro";
 ---
 
-<footer
-	class="mt-10 flex w-full flex-auto flex-col bg-black/25 p-10 lg:flex-row"
->
+<style is:global>
+	footer {
+		@apply mt-10 flex w-full flex-auto flex-col bg-black/25 p-10 lg:flex-row;
+	}
+</style>
+<style>
+	div {
+		@apply flex w-full flex-col lg:ml-5 lg:flex-row lg:space-x-5;
+	}
+</style>
+
+<footer>
 	<img class="h-20" src="/assets/2412.avif" />
-	<div class="flex w-full flex-col lg:ml-5 lg:flex-row lg:space-x-5">
+	<div>
 		<FooterColumn>
 			<p>Social</p>
 			<hr />
