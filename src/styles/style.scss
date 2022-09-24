@@ -62,8 +62,13 @@ footer {
 		@apply list-decimal;
 	}
 
+	// List items
+	li {
+		@apply w-fit;
+	}
+
 	img {
-		@apply h-max max-h-[10vh] w-auto object-contain;
+		@apply w-auto object-contain;
 	}
 
 	// Inline code

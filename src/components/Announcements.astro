@@ -1,0 +1,30 @@
+---
+const announcements = await Astro.glob("../announcements/*");
+---
+
+<style is:global lang="scss">
+	article {
+		@apply w-fit px-4 text-center;
+
+		iframe,
+		img {
+			@apply h-80 w-full;
+		}
+	}
+</style>
+<style>
+	div {
+		@apply flex flex-col justify-evenly lg:flex-row;
+	}
+</style>
+
+<div>
+	{
+		announcements.map((page) => (
+			<article>
+				<h1>{page.title}</h1>
+				<page.Content />
+			</article>
+		))
+	}
+</div>

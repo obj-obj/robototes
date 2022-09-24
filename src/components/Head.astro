@@ -4,7 +4,7 @@ import "../styles/style.scss";
 
 const { content = {} } = Astro.props;
 const { description } = content;
-const title = content.title ? content.title + " | " + site.title : site.title;
+const title = content.title ? content.title + " │ " + site.title : site.title;
 ---
 
 <head>
