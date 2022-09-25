@@ -10,11 +10,11 @@
 
 /* UTIL */
 .columns {
-	@apply gap-8 md:flex;
+	@apply md:flex md:justify-evenly md:gap-8;
 }
 
-.columns .column {
-	@apply flex-grow;
+.columns > * {
+	@apply md:w-full;
 }
 
 /* MAIN CONTENT */
@@ -28,7 +28,7 @@ main,
 footer {
 	font-size: 18px;
 
-	:target {
+	*:target {
 		@apply bg-rose-900;
 	}
 
@@ -139,18 +139,15 @@ main {
 	}
 }
 
-iframe {
-	@apply h-[75vh] w-full;
+.iframe-wrapper {
+	@apply relative z-0 h-0 pb-[56.25%];
+}
+
+.iframe-wrapper iframe {
+	@apply absolute top-0 left-0 h-full w-full;
 }
 
 // Make horizontal rules always full width
 hr {
 	@apply w-full;
-}
-
-/* NAVBAR */
-
-// Navbar toggle button toggles navbar on mobile. Toggle navbar button is really a checkbox in disguise
-#navtoggle:checked + #navlinks {
-	@apply flex;
 }

@@ -2,5 +2,22 @@
 	"prettier.documentSelectors": ["**/*.astro"],
 	"[astro]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	}
+	},
+	"[mdx]": {
+		"editor.formatOnPaste": false,
+		"editor.formatOnSave": false,
+		"editor.formatOnType": false
+	},
+	"ltex.enabled": [
+		"bibtex",
+		"context",
+		"context.tex",
+		"html",
+		"latex",
+		"markdown",
+		"org",
+		"restructuredtext",
+		"rsweave",
+		"mdx"
+	]
 }

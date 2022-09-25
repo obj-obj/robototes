@@ -3,13 +3,18 @@ import Navdrop from "./NavDropdown.astro";
 import Navitem from "./NavItem.astro";
 ---
 
-<style is:global>
+<style is:global lang="scss">
 	nav {
-		@apply flex w-full flex-col bg-dark px-2 text-lg lg:sticky lg:top-0 lg:h-12 lg:flex-row lg:items-stretch;
+		@apply z-50 flex w-full flex-col bg-dark px-2 text-lg lg:sticky lg:top-0 lg:h-12 lg:flex-row lg:items-stretch;
 	}
 
 	#navlinks {
 		@apply hidden flex-col items-baseline overflow-y-hidden lg:ml-auto lg:flex lg:h-auto lg:flex-row lg:items-center;
+	}
+
+	// Navbar toggle button toggles navbar on mobile. Toggle navbar button is really a checkbox in disguise
+	#navtoggle:checked + #navlinks {
+		@apply flex;
 	}
 </style>
 
