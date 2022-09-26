@@ -1,4 +1,6 @@
 ---
+import YoutubeEmbed from "./YoutubeEmbed.astro";
+
 export interface Props {
 	img: string;
 	video: string;
@@ -18,12 +20,7 @@ const { img, video } = Astro.props;
 		<slot name="left" />
 	</div>
 	<div>
-		<div class="iframe-wrapper">
-			<iframe
-				src={`https://www.youtube-nocookie.com/embed/${video}`}
-				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-				allowfullscreen></iframe>
-		</div>
+		<YoutubeEmbed video={video} />
 		<slot name="right" />
 	</div>
 </div>

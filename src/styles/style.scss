@@ -14,7 +14,7 @@
 }
 
 .columns > * {
-	@apply md:w-full;
+	@apply md:h-fit md:w-full;
 }
 
 /* MAIN CONTENT */
@@ -26,7 +26,7 @@
 // Styles within are applied to everything but the navbar
 main,
 footer {
-	font-size: 18px;
+	font-size: 16px;
 
 	*:target {
 		@apply bg-rose-900;

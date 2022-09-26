@@ -6,20 +6,7 @@ layout: /src/layouts/Page.astro
 
 import Announcements from "@components/Announcements.astro";
 import Sponsors from "@components/Sponsors.astro";
-
-# 2022 Pacific Northwest District Championships Chairman's Winners
-
-<div class="iframe-wrapper">
-	<iframe
-		src="https://www.youtube-nocookie.com/embed/MziMzrM4DRA"
-		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-		allowfullscreen
-	/>
-</div>
-
-# Announcements
-
-<Announcements />
+import YoutubeEmbed from "@components/YoutubeEmbed.astro";
 
 ## Who are we?
 
@@ -33,41 +20,36 @@ To provide all members with the opportunity to grow and learn as leaders, learne
 
 As well as participate in FRC, we also spread the mission of FIRST in our community. We hold and participate in Outreach events at local organizations ([Bellevue Arts Museum](https://bellevuearts.org)), schools in [BSD](https://bsd405.org) and [Crossroads Community Center](https://bellevuewa.gov/city-government/departments/parks/community-centers/crossroads).
 
+# Announcements
+
+<Announcements />
+
+# 2022 Pacific Northwest District Championships Chairman's Winners
+
+<YoutubeEmbed video="MziMzrM4DRA" />
+
 ## Thank you to our [Sponsors](/about/sponsors)!
 
 <Sponsors active />
 
 <div class="columns">
-<div class="md:text-right">
-	**As well as our past sponsors**
-
-	Alaska Airlines
-
-	Analog Devices
-
-	Andeavor
-
-	Boeing
-
-	Embry-Riddle Aeronautical University
-
-	Google
-
-	First Tech Credit Union
-
-	Kaliber Global
-
-	Kpff
-
-	Plugable
-
-	Home Depot
-
+<div>
+	**As well as our past sponsors:**
+	- Alaska Airlines
+	- Analog Devices
+	- Andeavor
+	- Boeing
+	- Embry-Riddle Aeronautical University
+	- Google
+	- First Tech Credit Union
+	- Kaliber Global
+	- Kpff
+	- Plugable
+	- Home Depot
 </div>
 <div>
 	## Help support our team!
 
 	For instructions on how to donate, see [our Sponsors page](/about/sponsors#how-to-donate).
-
 </div>
 </div>

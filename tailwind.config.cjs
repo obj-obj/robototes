@@ -4,11 +4,9 @@ module.exports = {
 		extend: {
 			colors: {
 				// Background
-				primary: "#300807",
-				// Darker Background
-				dark: "#240605",
+				primary: "#240605",
 				// Secondary Background
-				secondary: "#44091b",
+				secondary: "#300807",
 			},
 			fontFamily: {
 				sans: ['"Fira Sans"'],

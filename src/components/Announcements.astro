@@ -4,7 +4,7 @@ const announcements = await Astro.glob("../announcements/*");
 
 <style is:global lang="scss">
 	article {
-		@apply w-fit px-4 text-center;
+		@apply border border-emerald-900 bg-black/25 p-4 text-start;
 
 		iframe,
 		img {
@@ -12,13 +12,8 @@ const announcements = await Astro.glob("../announcements/*");
 		}
 	}
 </style>
-<style>
-	div {
-		@apply flex flex-col justify-evenly lg:flex-row;
-	}
-</style>
 
-<div>
+<div class="columns">
 	{
 		announcements.map((page) => (
 			<article>
