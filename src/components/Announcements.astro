@@ -17,7 +17,6 @@ const announcements = await Astro.glob("../announcements/*");
 	{
 		announcements.map((page) => (
 			<article>
-				<h1>{page.title}</h1>
 				<page.Content />
 			</article>
 		))
