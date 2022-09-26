@@ -4,26 +4,28 @@ import FooterColumn from "./FooterColumn.astro";
 
 <style is:global>
 	footer {
-		@apply mt-10 flex w-full flex-auto flex-col bg-black/25 p-10 lg:flex-row;
-	}
-</style>
-<style>
-	div {
-		@apply flex w-full flex-col lg:ml-5 lg:flex-row lg:space-x-5;
+		@apply mt-10 flex w-full flex-auto flex-col gap-8 bg-black/25 p-10 lg:flex-row;
 	}
 </style>
 
 <footer>
-	<img class="h-20" src="/assets/2412.avif" />
-	<div>
-		<FooterColumn>
-			<p>Social</p>
-			<hr />
-			<a href="https://www.facebook.com/Robototes">Facebook</a>
-			<a href="https://twitter.com/Robototes">Twitter</a>
-			<a href="https://www.instagram.com/Robototes">Instagram</a>
-			<a href="https://www.youtube.com/c/Robototes">YouTube</a>
-			<a href="https://github.com/Robototes">GitHub</a>
-		</FooterColumn>
-	</div>
+	<FooterColumn>
+		<a href="https://www.netlify.com"
+			><img
+				src="https://www.netlify.com/v3/img/components/netlify-color-accent.svg"
+				alt="Deploys by Netlify"
+			/>
+		</a>
+		<img class="mt-5 h-20" src="/assets/2412.avif" />
+	</FooterColumn>
+
+	<FooterColumn>
+		<p>Social</p>
+		<hr />
+		<a href="https://www.facebook.com/Robototes">Facebook</a>
+		<a href="https://twitter.com/Robototes">Twitter</a>
+		<a href="https://www.instagram.com/Robototes">Instagram</a>
+		<a href="https://www.youtube.com/c/Robototes">YouTube</a>
+		<a href="https://github.com/Robototes">GitHub</a>
+	</FooterColumn>
 </footer>
