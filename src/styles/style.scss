@@ -10,7 +10,7 @@
 
 /* UTIL */
 .columns {
-	@apply md:flex md:justify-evenly md:gap-8;
+	@apply flex flex-col gap-8 md:flex-row md:justify-evenly;
 }
 
 .columns > * {
