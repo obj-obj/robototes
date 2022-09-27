@@ -49,7 +49,7 @@ footer {
 	// All lists
 	ul,
 	ol {
-		@apply ml-5;
+		@apply list-inside;
 	}
 
 	// Unordered lists
@@ -68,7 +68,7 @@ footer {
 	}
 
 	img {
-		@apply w-auto object-contain;
+		@apply w-full object-contain;
 	}
 
 	// Inline code

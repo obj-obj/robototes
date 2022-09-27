@@ -16,8 +16,8 @@ const { img, video } = Astro.props;
 
 <div class="columns">
 	<div>
-		<img src={`/assets/competitions/${img}.avif`} />
 		<slot name="left" />
+		<img src={`/assets/competitions/${img}.avif`} />
 	</div>
 	<div>
 		<YoutubeEmbed video={video} />
