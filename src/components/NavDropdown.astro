@@ -8,7 +8,10 @@ export interface Props {
 	right?: boolean;
 }
 
-const { href, link, pages, right } = Astro.props as Props;
+const { href, link, right } = Astro.props as Props;
+const pages = Astro.props.pages.sort((a, b) =>
+	a.frontmatter.title.localeCompare(b.frontmatter.title)
+);
 ---
 
 <style is:global>
