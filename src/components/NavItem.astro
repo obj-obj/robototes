@@ -21,7 +21,7 @@ const { href, link = true } = Astro.props as Props;
 <div class="h-full w-full border-cyan-800 lg:w-auto">
 	{
 		link ? (
-			<a href={href}>
+			<a rel="prefetch" href={href}>
 				<slot />
 			</a>
 		) : (

@@ -39,6 +39,7 @@ function isCurrent(url: string) {
 	{
 		pages.map((page) => (
 			<a
+				rel="prefetch"
 				class={`${isCurrent(page.url) ? " bg-rose-900/25" : ""}`}
 				href={page.url}
 			>
