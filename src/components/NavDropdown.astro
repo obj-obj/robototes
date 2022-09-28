@@ -16,11 +16,11 @@ const pages = Astro.props.pages.sort((a, b) =>
 
 <style is:global>
 	.navdrop {
-		@apply h-full w-full lg:w-max;
+		@apply h-full w-full border-cyan-800 lg:w-max;
 	}
 
 	.navdropinner {
-		@apply ml-2 border-emerald-900 lg:pointer-events-none lg:absolute lg:z-10 lg:ml-0 lg:-translate-y-5 lg:rounded-md lg:border lg:bg-secondary lg:p-1 lg:opacity-0;
+		@apply ml-2 border-cyan-800 lg:pointer-events-none lg:absolute lg:z-10 lg:ml-0 lg:-translate-y-5 lg:rounded-md lg:border lg:bg-secondary lg:p-1 lg:opacity-0;
 	}
 
 	.navdrop:hover .navdropinner {

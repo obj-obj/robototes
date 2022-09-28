@@ -9,7 +9,7 @@ import Navitem from "./NavItem.astro";
 	}
 
 	#navlinks {
-		@apply hidden flex-col items-baseline overflow-y-hidden lg:ml-auto lg:flex lg:h-auto lg:flex-row lg:items-center;
+		@apply hidden flex-col items-baseline gap-4 overflow-y-hidden border-b-2 border-emerald-700 lg:ml-auto lg:flex lg:h-auto lg:flex-row lg:items-center lg:gap-0 lg:divide-none lg:border-none;
 	}
 
 	// Navbar toggle button toggles navbar on mobile. Toggle navbar button is really a checkbox in disguise
@@ -33,7 +33,6 @@ import Navitem from "./NavItem.astro";
 	<input id="navtoggle" type="checkbox" class="hidden" />
 
 	<div id="navlinks">
-		<Navitem href="/">Home</Navitem>
 		<Navdrop
 			href="/about"
 			pages={await Astro.glob("../pages/about/!(index.md)")}

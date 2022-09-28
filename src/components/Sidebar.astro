@@ -13,10 +13,6 @@ function isCurrent(url: string) {
 ---
 
 <style>
-	div {
-		@apply ml-5 mr-5 mt-5 flex h-min flex-col gap-1 overflow-scroll rounded border border-emerald-900 bg-secondary p-1 md:sticky md:top-5 md:ml-10 md:max-h-[calc(100vh-2rem)] md:w-1/6;
-	}
-
 	p {
 		@apply px-2 pt-2 text-sm;
 	}
@@ -24,9 +20,26 @@ function isCurrent(url: string) {
 	a {
 		@apply h-max w-full rounded p-2 hover:bg-rose-900/25;
 	}
+
+	label {
+		@apply ml-5 mt-5 w-min rounded border border-cyan-800 bg-secondary p-2 hover:bg-rose-900/25;
+	}
+
+	div {
+		@apply ml-5 mr-5 mt-5 hidden h-min flex-col gap-1 overflow-scroll rounded border border-cyan-800 bg-secondary p-1 md:sticky md:top-5 md:ml-10 md:max-h-[calc(100vh-2rem)] md:w-1/6 lg:flex;
+	}
 </style>
 
-<div>
+<style is:global>
+	#sidebartoggle:checked + #sidebar {
+		@apply flex;
+	}
+</style>
+
+<label for="sidebartoggle" class="lg:hidden">Pages</label>
+
+<input id="sidebartoggle" type="checkbox" class="hidden" />
+<div id="sidebar">
 	<p>Pages</p>
 	<hr />
 	{

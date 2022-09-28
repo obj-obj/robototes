@@ -2,12 +2,11 @@
 const announcements = await Astro.glob("../announcements/*");
 ---
 
-<style is:global lang="scss">
+<style lang="scss">
 	article {
 		@apply border border-emerald-900 bg-black/25 p-4 text-start;
 
-		iframe,
-		img {
+		:global(iframe, img) {
 			@apply h-80 w-full;
 		}
 	}

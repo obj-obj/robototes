@@ -68,7 +68,7 @@ footer {
 	}
 
 	img {
-		@apply w-full object-contain;
+		@apply w-full;
 	}
 
 	// Inline code
@@ -126,6 +126,8 @@ footer {
 }
 
 main {
+	@apply w-full max-w-screen-xl px-5 lg:pl-5 lg:pr-12 lg:text-justify;
+
 	* {
 		@apply rounded;
 	}
@@ -150,4 +152,8 @@ main {
 // Make horizontal rules always full width
 hr {
 	@apply w-full;
+}
+
+img {
+	@apply object-contain;
 }

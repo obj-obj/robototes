@@ -16,6 +16,10 @@ const { href, link = true } = Astro.props as Props;
 	p {
 		@apply flex h-full items-center rounded p-1 px-2 hover:bg-rose-900/25;
 	}
+
+	div {
+		@apply h-full w-full border-cyan-800 lg:w-auto;
+	}
 </style>
 
 <style is:global lang="scss">
@@ -27,14 +31,16 @@ const { href, link = true } = Astro.props as Props;
 	}
 </style>
 
-{
-	link ? (
-		<a href={href}>
-			<slot />
-		</a>
-	) : (
-		<p>
-			<slot />
-		</p>
-	)
-}
+<div>
+	{
+		link ? (
+			<a href={href}>
+				<slot />
+			</a>
+		) : (
+			<p>
+				<slot />
+			</p>
+		)
+	}
+</div>
