@@ -4,16 +4,15 @@ import Head from "@components/Head.astro";
 import Nav from "@components/Nav.astro";
 ---
 
-<style is:global>
-	body {
-		@apply flex min-h-screen w-full flex-col items-center bg-primary text-slate-100 selection:bg-rose-900;
-	}
-</style>
+<!DOCTYPE html>
+<html>
+	<Head content={Astro.props.content} />
 
-<Head content={Astro.props.content} />
-
-<body>
-	<Nav />
-	<slot />
-	<Footer />
-</body>
+	<body
+		class="flex min-h-screen w-full flex-col items-center bg-primary text-slate-100 selection:bg-rose-900"
+	>
+		<Nav />
+		<slot />
+		<Footer />
+	</body>
+</html>

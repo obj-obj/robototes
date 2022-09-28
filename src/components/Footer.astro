@@ -2,13 +2,9 @@
 import FooterColumn from "./FooterColumn.astro";
 ---
 
-<style is:global>
-	footer {
-		@apply mt-10 flex w-full flex-auto flex-col gap-8 bg-black/25 p-10 lg:flex-row;
-	}
-</style>
-
-<footer>
+<footer
+	class="mt-10 flex w-full flex-auto flex-col gap-8 bg-black/25 p-10 lg:flex-row"
+>
 	<FooterColumn>
 		<a href="https://www.netlify.com"
 			><img

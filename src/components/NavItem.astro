@@ -16,22 +16,9 @@ const { href, link = true } = Astro.props as Props;
 	p {
 		@apply flex h-full items-center rounded p-1 px-2 hover:bg-rose-900/25;
 	}
-
-	div {
-		@apply h-full w-full border-cyan-800 lg:w-auto;
-	}
 </style>
 
-<style is:global lang="scss">
-	.navdropinner {
-		a,
-		p {
-			width: 100%;
-		}
-	}
-</style>
-
-<div>
+<div class="h-full w-full border-cyan-800 lg:w-auto">
 	{
 		link ? (
 			<a href={href}>

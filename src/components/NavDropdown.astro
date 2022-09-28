@@ -15,12 +15,8 @@ const pages = Astro.props.pages.sort((a, b) =>
 ---
 
 <style is:global>
-	.navdrop {
-		@apply h-full w-full border-cyan-800 lg:w-max;
-	}
-
-	.navdropinner {
-		@apply ml-2 border-cyan-800 lg:pointer-events-none lg:absolute lg:z-10 lg:ml-0 lg:-translate-y-5 lg:rounded-md lg:border lg:bg-secondary lg:p-1 lg:opacity-0;
+	.navdrop:last-child .navdropinner {
+		@apply lg:right-0;
 	}
 
 	.navdrop:hover .navdropinner {
@@ -28,12 +24,14 @@ const pages = Astro.props.pages.sort((a, b) =>
 	}
 </style>
 
-<div class="navdrop">
+<div class="navdrop h-full w-full border-cyan-800 lg:w-max">
 	<Navitem href={href} link={link}>
 		<slot />
 	</Navitem>
 
-	<div class={`navdropinner${right ? " right-0" : ""}`}>
+	<div
+		class="navdropinner ml-2 border-cyan-800 lg:pointer-events-none lg:absolute lg:z-10 lg:float-left lg:ml-0 lg:-translate-y-5 lg:rounded-md lg:border lg:bg-secondary lg:p-1 lg:opacity-0 [&_*]:w-full"
+	>
 		{
 			pages.map((page) => (
 				<Navitem href={page.url}>{page.frontmatter.title}</Navitem>

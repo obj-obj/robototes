@@ -18,7 +18,6 @@
 }
 
 /* MAIN CONTENT */
-
 * {
 	@apply scroll-smooth duration-100;
 }
@@ -126,8 +125,6 @@ footer {
 }
 
 main {
-	@apply w-full max-w-screen-xl px-5 lg:pl-5 lg:pr-12 lg:text-justify;
-
 	* {
 		@apply rounded;
 	}

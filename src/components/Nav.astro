@@ -3,22 +3,9 @@ import Navdrop from "./NavDropdown.astro";
 import Navitem from "./NavItem.astro";
 ---
 
-<style is:global lang="scss">
-	nav {
-		@apply flex w-full flex-col px-2 text-lg lg:h-12 lg:flex-row lg:items-stretch;
-	}
-
-	#navlinks {
-		@apply hidden flex-col items-baseline gap-4 overflow-y-hidden border-b-2 border-emerald-700 lg:ml-auto lg:flex lg:h-auto lg:flex-row lg:items-center lg:gap-0 lg:divide-none lg:border-none;
-	}
-
-	// Navbar toggle button toggles navbar on mobile. Toggle navbar button is really a checkbox in disguise
-	#navtoggle:checked + #navlinks {
-		@apply flex;
-	}
-</style>
-
-<nav>
+<nav
+	class="flex w-full flex-col px-2 text-lg lg:h-12 lg:flex-row lg:items-stretch"
+>
 	<div class="flex items-center">
 		<a class="flex items-center p-1" href="/">
 			<img src="/assets/robototes.avif" class="mr-1 h-8" />
@@ -30,9 +17,10 @@ import Navitem from "./NavItem.astro";
 		</label>
 	</div>
 
-	<input id="navtoggle" type="checkbox" class="hidden" />
-
-	<div id="navlinks">
+	<input id="navtoggle" type="checkbox" class="peer hidden" />
+	<div
+		class="hidden flex-col items-baseline gap-4 overflow-y-hidden border-b-2 border-emerald-700 peer-checked:flex lg:ml-auto lg:flex lg:h-auto lg:flex-row lg:items-center lg:gap-0 lg:divide-none lg:border-none"
+	>
 		<Navdrop
 			href="/about"
 			pages={await Astro.glob("../pages/about/!(index.md)")}
@@ -52,11 +40,7 @@ import Navitem from "./NavItem.astro";
 		</Navdrop>
 		<Navitem href="/calendar">Calendar</Navitem>
 		<Navitem href="/contact">Contact Us</Navitem>
-		<Navdrop
-			link={false}
-			pages={await Astro.glob("../pages/meta/index.mdx")}
-			right
-		>
+		<Navdrop link={false} pages={await Astro.glob("../pages/meta/index.mdx")}>
 			...
 		</Navdrop>
 	</div>
