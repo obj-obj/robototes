@@ -8,11 +8,5 @@ import prefetch from "@astrojs/prefetch";
 // https://astro.build/config
 export default defineConfig({
 	site: "https://robototes.netlify.app",
-	integrations: [
-		tailwind({}),
-		sitemap(),
-		mdx(),
-		htmlMinifier(),
-		prefetch({ throttle: 5 }),
-	],
+	integrations: [tailwind({}), sitemap(), mdx(), htmlMinifier()],
 });
