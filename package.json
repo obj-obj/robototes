@@ -7,6 +7,7 @@
 		"preview": "astro preview"
 	},
 	"dependencies": {
+		"@astrojs/markdown-component": "^1.0.1",
 		"@astrojs/mdx": "^0.11.2",
 		"@astrojs/prefetch": "^0.0.7",
 		"@astrojs/sitemap": "^1.0.0",
@@ -15,6 +16,7 @@
 		"astro-html-minifier": "^0.2.0",
 		"prettier": "^2.7.1",
 		"prettier-plugin-astro": "^0.5.4",
-		"sass": "^1.55.0"
+		"sass": "^1.55.0",
+		"prettier-plugin-tailwindcss": "git+https://github.com/tailwindlabs/prettier-plugin-tailwindcss.git"
 	}
 }
