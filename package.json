@@ -17,6 +17,6 @@
 		"prettier": "^2.7.1",
 		"prettier-plugin-astro": "^0.5.4",
 		"sass": "^1.55.0",
-		"prettier-plugin-tailwindcss": "git+https://github.com/tailwindlabs/prettier-plugin-tailwindcss.git"
+		"prettier-plugin-tailwindcss": "^0.1.13"
 	}
 }
