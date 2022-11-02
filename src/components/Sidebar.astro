@@ -61,12 +61,10 @@ function isCurrent(url: string) {
 			<a
 				class={`${
 					heading.depth > 1
-						? heading.depth > 2
-							? heading.depth > 3
-								? " text-xs"
-								: " text-sm"
-							: " text-base"
-						: ""
+						? heading.depth > 3
+							? "text-xs"
+							: " text-sm"
+						: "text-base"
 				}`}
 				href={`#${heading.slug}`}
 			>

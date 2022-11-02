@@ -1,11 +1,14 @@
 ---
 export interface Props {
 	video: string;
+	class?: string;
 }
 const { video } = Astro.props;
 ---
 
-<div class="iframe-wrapper">
+<div
+	class={"iframe-wrapper" + (Astro.props.class ? " " + Astro.props.class : "")}
+>
 	<iframe
 		src={`https://www.youtube-nocookie.com/embed/${video}`}
 		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

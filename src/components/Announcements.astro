@@ -4,7 +4,8 @@ const announcements = await Astro.glob("../announcements/*");
 
 <style lang="scss">
 	article {
-		:global(iframe, img) {
+		:global(iframe),
+		:global(img) {
 			@apply h-80 w-full;
 		}
 	}
@@ -13,7 +14,7 @@ const announcements = await Astro.glob("../announcements/*");
 <div class="columns">
 	{
 		announcements.map((page) => (
-			<article class="border border-emerald-900 bg-black/25 p-4 text-start">
+			<article class="text-start border border-emerald-900 bg-black/25 p-4">
 				<page.Content />
 			</article>
 		))

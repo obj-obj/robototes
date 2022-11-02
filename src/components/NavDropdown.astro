@@ -5,13 +5,16 @@ export interface Props {
 	href?: URL | string;
 	link?: boolean;
 	pages: Record<string, any>[];
-	right?: boolean;
 }
 
-const { href, link, right } = Astro.props as Props;
+const { href, link } = Astro.props as Props;
 const pages = Astro.props.pages.sort((a, b) =>
 	a.frontmatter.title.localeCompare(b.frontmatter.title)
 );
+
+function isCurrent() {
+	return Astro.url.pathname.startsWith(href);
+}
 ---
 
 <style is:global>
@@ -25,7 +28,11 @@ const pages = Astro.props.pages.sort((a, b) =>
 </style>
 
 <div class="navdrop h-full w-full border-cyan-800 lg:w-max">
-	<Navitem href={href} link={link}>
+	<Navitem
+		href={href}
+		link={link}
+		klass={isCurrent() ? "bg-rose-900/25" : undefined}
+	>
 		<slot />
 	</Navitem>
 

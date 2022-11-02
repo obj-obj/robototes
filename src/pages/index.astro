@@ -1,0 +1,120 @@
+---
+import Base from "@layouts/Base.astro";
+import Sponsors from "@components/Sponsors.astro";
+import YoutubeEmbed from "@components/YoutubeEmbed.astro";
+---
+
+<style is:global>
+	nav {
+		backdrop-filter: blur(20px) brightness(80%);
+	}
+</style>
+
+<Base content={{ title: "The Robototes" }}>
+	<header
+		class="w-full h-screen -translate-y-12 flex flex-col items-center justify-center"
+	>
+		<img
+			class="absolute top-0 left-0 w-full h-full object-cover brightness-[60%] blur-sm -z-10"
+			src="/assets/homepagebackground.avif"
+			alt=""
+		/>
+
+		<h2 class="text-lg md:text-3xl">Sammamish High School</h2>
+		<h1 class="text-5xl md:text-8xl">The Robototes</h1>
+	</header>
+	<main class="w-full max-w-screen-2xl px-5 lg:pl-5 lg:pr-12 lg:text-justify">
+		<h1>About Us</h1>
+		<div class="grid lg:grid-cols-3 gap-8">
+			<div class="border-2 border-indigo-800 p-4 bg-black/25">
+				<h3>Who are we?</h3>
+				<p>
+					We are the Robototes, Sammamish High School's FIRST Robotics team. We
+					have participated in the <a href="https://www.firstinspires.org"
+						>FIRST Robototics Competition</a
+					> (FRC) since 2008.
+				</p>
+			</div>
+			<div class="border-2 border-cyan-800 p-4 bg-black/25">
+				<h3>Our Mission:</h3>
+				<p>
+					To provide all members with the opportunity to grow and learn as
+					leaders, learners and innovators, all while growing interest in STEM
+					in our community.
+				</p>
+			</div>
+			<div class="border-2 border-emerald-800 p-4 bg-black/25">
+				<h3>What do we do?</h3>
+				<p>
+					As well as participating in FRC, we also spread the mission of FIRST
+					in our community. We hold and participate in outreach events at local
+					organizations - such as the Bellevue Arts Museum, the Bellevue School
+					District, and Crossroads Community Center.
+				</p>
+			</div>
+		</div>
+
+		<h1>Announcements</h1>
+		<div class="grid lg:grid-cols-3 gap-8 text-center">
+			<div class="border-2 border-emerald-800 p-4 bg-black/25">
+				<img class="h-80" src="/assets/fll-alliance.avif" alt="" />
+				<h4>FLL Alliance of Bellevue Interest Meeting!</h4>
+				<p>
+					Are you interested in getting your kids into robotics and teaching
+					them about STEM, engineering, teamwork, and more?
+				</p>
+				<p>
+					Try hosting your own FLL team and joining the FIRST LEGO LEAGUE
+					Alliance of Bellevue!
+				</p>
+				<p>
+					Come to one of our information meetings at Sammamish High School's
+					Robotics Shop!
+				</p>
+				<ul>
+					<li>March 30th 2:30pm - 4:30pm</li>
+					<li>April 1st 6:30pm - 8:30pm</li>
+				</ul>
+				<p>
+					More information at <a href="/outreach/flla-bellevue"
+						>FLLA - Bellevue</a
+					>
+				</p>
+			</div>
+			<div class="border-2 border-cyan-800 p-4 bg-black/25">
+				<YoutubeEmbed class="!h-80" video="QFANuu5Qrr8" />
+				<h4>Youtube</h4>
+				<p>
+					Check out our <a
+						href="https://www.youtube.com/channel/UCGPcRxxZuqsReqQDWMfKrVw"
+						>Youtube channel</a
+					>, where we post updates about our season and what our team is up to.
+					Remember to like and subscribe for more!
+				</p>
+			</div>
+			<div class="border-2 border-indigo-800 p-4 bg-black/25">
+				<img class="h-80" src="/assets/equity-initiative.avif" alt="" />
+				<h4>Equity Initiative</h4>
+				<p>
+					We, are outraged by institutional racism against the black community
+					in our country. We feel it is our obligation to fight to end racism
+					and the injustices it brings. We will not stay silent.
+				</p>
+				<p>
+					To learn more about how we are working to promote equity and
+					inclusivity on our team, you can visit our <a
+						href="/outreach/equity-initiative">Equity Initative</a
+					> page.
+				</p>
+			</div>
+		</div>
+
+		<h1>Thank you to our <a href="/about/sponsors">Sponsors</a>!</h1>
+		<Sponsors active />
+		<p>
+			For instructions on how to donate, please see our <a
+				href="/about/sponsors">sponsors page</a
+			>.
+		</p>
+	</main>
+</Base>

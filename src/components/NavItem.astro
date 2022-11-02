@@ -2,9 +2,14 @@
 export interface Props {
 	href?: URL | string;
 	link?: boolean;
+	klass?: string;
 }
 
 const { href, link = true } = Astro.props as Props;
+let klass = Astro.props.klass;
+if (href == Astro.url.pathname || href + "/" == Astro.url.pathname) {
+	klass = "bg-rose-900/25";
+}
 ---
 
 <style>
@@ -21,11 +26,11 @@ const { href, link = true } = Astro.props as Props;
 <div class="h-full w-full border-cyan-800 lg:w-auto">
 	{
 		link ? (
-			<a rel="prefetch" href={href}>
+			<a href={href} class={klass}>
 				<slot />
 			</a>
 		) : (
-			<p>
+			<p class={klass}>
 				<slot />
 			</p>
 		)
