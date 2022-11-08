@@ -9,12 +9,22 @@
 @tailwind utilities;
 
 /* UTIL */
-.columns {
-	@apply flex flex-col gap-8 md:flex-row md:justify-evenly;
-}
+@layer components {
+	.columns {
+		@apply flex flex-col gap-8 md:flex-row md:justify-evenly;
+	}
 
-.columns > * {
-	@apply md:h-fit md:w-full;
+	.columns > * {
+		@apply md:h-fit md:w-full;
+	}
+
+	.iframe-wrapper {
+		@apply relative z-0 h-0 pb-[56.25%];
+	}
+
+	.iframe-wrapper iframe {
+		@apply absolute top-0 left-0 h-full w-full;
+	}
 }
 
 /* MAIN CONTENT */
@@ -142,14 +152,6 @@ main {
 	multicol {
 		margin-block: 1em;
 	}
-}
-
-.iframe-wrapper {
-	@apply relative z-0 h-0 pb-[56.25%];
-}
-
-.iframe-wrapper iframe {
-	@apply absolute top-0 left-0 h-full w-full;
 }
 
 // Make horizontal rules always full width

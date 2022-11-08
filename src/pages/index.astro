@@ -4,16 +4,15 @@ import Sponsors from "@components/Sponsors.astro";
 import YoutubeEmbed from "@components/YoutubeEmbed.astro";
 ---
 
-<style is:global>
-	nav {
-		backdrop-filter: blur(20px) brightness(80%);
-	}
-</style>
-
 <Base content={{ title: "The Robototes" }}>
-	<header
-		class="w-full h-screen -translate-y-12 flex flex-col items-center justify-center"
-	>
+	<style is:inline>
+		nav {
+			position: absolute;
+			backdrop-filter: blur(20px) brightness(80%);
+		}
+	</style>
+
+	<header class="w-full h-screen flex flex-col items-center justify-center">
 		<img
 			class="absolute top-0 left-0 w-full h-full object-cover brightness-[60%] blur-sm -z-10"
 			src="/assets/homepagebackground.avif"
@@ -23,9 +22,10 @@ import YoutubeEmbed from "@components/YoutubeEmbed.astro";
 		<h2 class="text-lg md:text-3xl">Sammamish High School</h2>
 		<h1 class="text-5xl md:text-8xl">The Robototes</h1>
 	</header>
-	<main class="w-full max-w-screen-2xl px-5 lg:pl-5 lg:pr-12 lg:text-justify">
+
+	<main class="w-full max-w-screen-2xl px-5 lg:text-justify">
 		<h1>About Us</h1>
-		<div class="grid lg:grid-cols-3 gap-8">
+		<div class="grid lg:grid-cols-3 gap-8 text-center">
 			<div class="border-2 border-indigo-800 p-4 bg-black/25">
 				<h3>Who are we?</h3>
 				<p>
@@ -96,9 +96,9 @@ import YoutubeEmbed from "@components/YoutubeEmbed.astro";
 				<img class="h-80" src="/assets/equity-initiative.avif" alt="" />
 				<h4>Equity Initiative</h4>
 				<p>
-					We, are outraged by institutional racism against the black community
-					in our country. We feel it is our obligation to fight to end racism
-					and the injustices it brings. We will not stay silent.
+					We are outraged by institutional racism against the black community in
+					our country. We feel it is our obligation to fight to end racism and
+					the injustices it brings. We will not stay silent.
 				</p>
 				<p>
 					To learn more about how we are working to promote equity and
