@@ -1,0 +1,11 @@
+---
+export interface Props {
+	src: string;
+}
+
+const { src } = Astro.props;
+---
+
+<div class="iframe-wrapper">
+	<iframe src={src} loading="lazy"></iframe>
+</div>
