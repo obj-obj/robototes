@@ -8,13 +8,11 @@ export interface Props {
 const { img, video } = Astro.props;
 ---
 
-<div class="columns">
-	<div>
-		<slot name="left" />
-		<img class="w-96 bg-white" src={`/assets/competitions/${img}.avif`} />
-	</div>
-	<div>
-		<YoutubeEmbed video={video} />
-		<slot name="right" />
-	</div>
+<div>
+	<slot name="left" />
+	<img class="w-96 bg-white" src={`/assets/competitions/${img}.avif`} />
+</div>
+<div>
+	<YoutubeEmbed video={video} />
+	<slot name="right" />
 </div>
