@@ -14,7 +14,7 @@ const announcements = await Astro.glob("../announcements/*");
 <div class="columns">
 	{
 		announcements.map((page) => (
-			<article class="text-start border border-emerald-900 bg-black/25 p-4">
+			<article class="border border-emerald-900 bg-black/25 p-4 text-start">
 				<page.Content />
 			</article>
 		))
