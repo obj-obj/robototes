@@ -37,10 +37,6 @@ main,
 footer {
 	font-size: 16px;
 
-	*:target {
-		@apply bg-rose-900;
-	}
-
 	// Tables
 	table {
 		@apply w-full bg-black/25;
