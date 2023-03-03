@@ -19,12 +19,13 @@ import Navitem from "./NavItem.astro";
 
 	<input id="navtoggle" type="checkbox" class="peer hidden" />
 	<div
-		class="hidden flex-col items-baseline gap-4 overflow-y-hidden border-b-2 border-emerald-700 peer-checked:flex lg:ml-auto lg:flex lg:h-auto lg:flex-row lg:items-center lg:gap-0 lg:divide-none lg:border-none"
+		class="absolute top-12 left-0 w-full -translate-x-full flex-col items-baseline gap-4 overflow-y-hidden rounded-md bg-secondary/75 backdrop-blur-md peer-checked:translate-x-0 lg:static lg:top-auto lg:left-auto lg:ml-auto lg:flex lg:h-auto lg:w-auto lg:translate-x-0 lg:flex-row lg:items-center lg:gap-0 lg:bg-inherit lg:backdrop-blur-0"
 	>
 		<Navdrop
 			href="/about"
 			pages={await Astro.glob("../pages/about/!(index.md)")}
-			>About
+		>
+			About
 		</Navdrop>
 		<Navdrop
 			href="/outreach"
