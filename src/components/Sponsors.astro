@@ -1,13 +1,3 @@
----
-export interface Props {
-	all?: boolean;
-	active?: boolean;
-}
-const props = Astro.props;
-const all = props.all;
-const active = all || props.active;
----
-
 <style>
 	img {
 		@apply max-h-[10vh] !w-auto;
@@ -15,18 +5,22 @@ const active = all || props.active;
 </style>
 
 <div class="flex flex-wrap justify-evenly gap-8 bg-white p-4">
-	{all && <img src="/assets/sponsors/analog_devices.avif" />}
-	{active && <img src="/assets/sponsors/bellevue_schools_foundation.avif" />}
-	{active && <img src="/assets/sponsors/colburn_law.avif" />}
-	{all && <img src="/assets/sponsors/first_tech.avif" />}
-	{all && <img src="/assets/sponsors/home_depot.avif" />}
-	{active && <img src="/assets/sponsors/intellectual_ventures.avif" />}
-	{all && <img src="/assets/sponsors/kaliber_global.avif" />}
-	{all && <img src="/assets/sponsors/kpff.avif" />}
-	{active && <img src="/assets/sponsors/mandrio.avif" />}
-	{active && <img src="/assets/sponsors/microsoft.avif" />}
-	{active && <img src="/assets/sponsors/p&p.avif" />}
-	{all && <img src="/assets/sponsors/plugable.avif" />}
-	{active && <img src="/assets/sponsors/public_instruction.avif" />}
-	{active && <img src="/assets/sponsors/t_mobile.avif" />}
+	<a href="https://bellevueschoolsfoundation.org" target="_blank">
+		<img src="/assets/sponsors/bellevue_schools_foundation.avif" />
+	</a>
+	<a href="https://www.k12.wa.us" target="_blank">
+		<img src="/assets/sponsors/public_instruction.avif" />
+	</a>
+	<a href="https://microsoft.com" target="_blank">
+		<img src="/assets/sponsors/microsoft.avif" />
+	</a>
+	<a href="https://electroimpact.com" target="_blank">
+		<img src="/assets/sponsors/electroimpact.avif" />
+	</a>
+	<a href="https://speea.org" target="_blank">
+		<img src="/assets/sponsors/speea.avif" />
+	</a>
+	<a href="https://intellectualventures.com" target="_blank">
+		<img src="/assets/sponsors/intellectual_ventures.avif" />
+	</a>
 </div>
