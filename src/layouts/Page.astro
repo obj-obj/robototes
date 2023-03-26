@@ -14,7 +14,7 @@ const pages = (await Astro.glob("/src/pages/**/*"))
 	<div class="flex w-full flex-col justify-center lg:flex-row">
 		{sidebar && <Sidebar pages={pages} headings={Astro.props.headings} />}
 
-		<main class="w-full max-w-screen-xl px-5 lg:pl-5 lg:pr-12 lg:text-justify">
+		<main class="w-full max-w-screen-xl px-5 lg:pl-5 lg:pr-12">
 			<h2 class="text-red-500">
 				This site isn't affiliated with the Robototes. This is an experimental
 				rewrite of the website.

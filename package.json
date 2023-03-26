@@ -7,17 +7,16 @@
 		"preview": "astro preview"
 	},
 	"dependencies": {
-		"@astrojs/markdown-component": "^1.0.2",
-		"@astrojs/mdx": "^0.17.2",
-		"@astrojs/prefetch": "^0.1.2",
-		"@astrojs/sitemap": "^1.1.0",
-		"@astrojs/tailwind": "^3.0.1",
-		"astro": "2.0.17",
+		"@astrojs/markdown-component": "^1.0.3",
+		"@astrojs/mdx": "^0.18.2",
+		"@astrojs/prefetch": "^0.2.1",
+		"@astrojs/sitemap": "^1.2.1",
+		"@astrojs/tailwind": "^3.1.1",
+		"astro": "2.1.7",
 		"astro-html-minifier": "^0.4.1",
-		"flamethrower-router": "0.0.0-meme.12",
-		"prettier": "^2.8.4",
+		"prettier": "^2.8.7",
 		"prettier-plugin-astro": "^0.8.0",
-		"prettier-plugin-tailwindcss": "^0.2.4",
-		"sass": "^1.58.3"
+		"prettier-plugin-tailwindcss": "^0.2.5",
+		"sass": "^1.60.0"
 	}
 }
