@@ -23,13 +23,13 @@
 	}
 
 	.iframe-wrapper iframe {
-		@apply absolute top-0 left-0 h-full w-full;
+		@apply absolute left-0 top-0 h-full w-full;
 	}
 }
 
 /* MAIN CONTENT */
 * {
-	@apply scroll-smooth duration-100;
+	@apply scroll-smooth;
 }
 
 // Styles within are applied to everything but the navbar
@@ -132,7 +132,7 @@ footer {
 	}
 
 	a {
-		@apply text-blue-400 hover:text-blue-200;
+		@apply text-blue-400 duration-100 hover:text-blue-200;
 	}
 }
 
